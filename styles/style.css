@@ -24,7 +24,6 @@
     transition: 0.2s ease; /* Hace que el cambio sea suave */
     margin-top: 40px;    /* Despega la imagen del título superior */
     margin-bottom: 40px;
-   
     
 }
 
@@ -67,6 +66,7 @@
     border-radius: 6px; /* Bordes redondeados modernos */
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none !important;
         
 }
 
