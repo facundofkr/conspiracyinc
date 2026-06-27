@@ -75,6 +75,11 @@
     background-color: rgb(1, 68, 21); /* Se aclara sutilmente al pasar el mouse */
 }
 
+.botonesnosotros {
+    margin-bottom: 30px; 
+    margin-top: 30px; 
+}
+
 .frase {
     margin-bottom: 40px;
     margin-top: 40px;
@@ -264,6 +269,19 @@ main ol li {
     margin-bottom: 40px;
     border-radius: 10px; /* Suaviza un poco las esquinas para que no sean tan filosas */
     box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6); /* El brillo verde difuminado */
+}
+
+/* Ajuste para que los videos dentro del carrusel mantengan tu estilo */
+.carousel-inner iframe {
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Opcional: Centrar el carrusel en pantallas grandes */
+#videoCarousel {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 
