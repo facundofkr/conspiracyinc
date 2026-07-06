@@ -31,9 +31,9 @@
 .titulo-principal {
     font-family: "Orbitron", system-ui;
     font-size: 60px; /* Un tamaño sutil */
-    letter-spacing: 10px; /* Separamos un poco las letras para dar 'respiro' */
+    letter-spacing: 30px; /* Separamos un poco las letras para dar 'respiro' */
     color: #ffffff; /* Color de adentro de la letra */
-    -webkit-text-stroke: 1px #0a0a0a; /* Borde de la letra: 1px de grosor, verde oscuro */
+    -webkit-text-stroke: 1px #034b01; /* Borde de la letra: 1px de grosor, verde oscuro */
     filter: drop-shadow(10px 10px 20px rgb(5, 143, 5)); 
 
 }
@@ -177,7 +177,7 @@ h1 {
     
 }
 h2 {
-    font-family: "Chelsea Market", system-ui;  
+    font-family: "Orbitron", system-ui;  
     text-align: center;
     color: white;
     font-weight: bold;
