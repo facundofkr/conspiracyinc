@@ -285,6 +285,52 @@ main ol li {
 }
 
 
+/* ========================================= */
+/* 📱 MEDIA QUERIES PARA CELULARES Y MÓVILES */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. Reducir los títulos principales para que no se corten */
+    .titulo-principal {
+        font-size: 32px !important;
+        letter-spacing: 3px !important;
+    }
+
+    h1 {
+        font-size: 30px !important;
+    }
+
+    /* 2. Ajustar el menú de navegación superior (botones) */
+    .menu-lista, header nav ul {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+    }
+
+    /* 3. Devolver las redes sociales del footer a la parte inferior y horizontal */
+    footer nav ul {
+        position: static !important;
+        flex-direction: row !important;
+        transform: none !important;
+        justify-content: center !important;
+        margin-top: 30px !important;
+        gap: 20px !important;
+    }
+
+    /* 4. Asegurar que las imágenes y videos se adapten al ancho de la pantalla del celular */
+    .imagenprincipal, .yo {
+        width: 90% !important;
+        height: auto !important;
+        max-width: 400px;
+    }
+
+    .contenedor-galeria {
+        grid-template-columns: 1fr !important;
+        padding: 10px !important;
+    }
+}
+
+
 
 
 
