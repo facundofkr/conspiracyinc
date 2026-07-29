@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
+
+/* ========================================= */
+/* 🎨 VARIABLES GLOBALES                       */
+/* ========================================= */
+
+// Tipografías
+$font-orbitron: "Orbitron", system-ui;
+$font-chelsea: "Chelsea Market", system-ui;
+$font-black-ops: "Black Ops One", system-ui;
+
+// Paleta de Colores
+$color-blanco: #ffffff;
+$color-hueso: antiquewhite;
+$color-fondo-body: #464d46;
+$color-texto-p: rgb(214, 219, 216);
+
+// Verdes
+$verde-borde: #034b01;
+$verde-boton: rgb(33, 46, 33);
+$verde-boton-hover: rgb(1, 68, 21);
+$verde-brillo-alien: rgba(1, 170, 29, 0.8);
+
+/* ========================================= */
+/* ⚙️ RESET Y CONFIGURACIÓN BASE               */
+/* ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: $color-fondo-body;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.home {
+    background-image: url(../assets/imgs/space.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+/* ========================================= */
+/* 📝 TIPOGRAFÍA Y TEXTOS                      */
+/* ========================================= */
+
+h1 {
+    text-align: center;
+    color: $color-blanco;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);   
+    margin-bottom: 30px;  
+
+    @media (max-width: 768px) {
+        font-size: 30px !important;
+    }
+}
+
+h2 {
+    font-family: $font-orbitron;  
+    text-align: center;
+    color: $color-blanco;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    font-size: 40px; 
+    margin: 30px 0;
+}
+
+h3 { 
+    font-size: 30px; 
+    color: $color-hueso;
+    text-shadow: 6px 6px 8px rgb(0, 0, 0);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h4 { 
+    font-size: 15px; 
+    color: $color-hueso;
+    text-shadow: 6px 6px 8px rgb(0, 0, 0);
+    margin-bottom: 40px;
+}
+
+p {
+    color: $color-texto-p;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+a {
+    color: $color-hueso;
+    text-decoration: none;
+    font-family: $font-black-ops;
+}
+
+.frase {
+    margin: 40px 0;
+    text-shadow: 6px 6px 10px rgb(0, 0, 0); 
+}
+
+.titulo-principal {
+    font-family: $font-orbitron;
+    font-size: 60px;
+    letter-spacing: 30px;
+    color: $color-blanco;
+    -webkit-text-stroke: 1px $verde-borde;
+    filter: drop-shadow(10px 10px 20px rgb(5, 143, 5)); 
+
+    @media (max-width: 768px) {
+        font-size: 32px !important;
+        letter-spacing: 3px !important;
+    }
+}
+
+/* ========================================= */
+/* 🏗️ ESTRUCTURA Y NAVEGACIÓN                  */
+/* ========================================= */
+
+header, main, footer {
+    padding: 25px 10px;
+}
+
+nav ul {
+    font-family: $font-chelsea;   
+    font-size: 40px; 
+    font-weight: bold;
+    color: $color-hueso;
+    text-align: center;           
+    list-style-position: inside;  
+    list-style-type: none; 
+    display: flex;                
+    justify-content: center;      
+    gap: 160px;                   
+    padding: 0;                    
+    transition: 0.2s ease; 
+    filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
+
+    li {
+        filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));    
+        transition: 0.2s ease; 
+
+        &:hover {
+            filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); 
+            transition: 0.3s ease; 
+        }
+    }
+}
+
+header nav ul {
+    @media (max-width: 768px) {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+    }
+}
+
+footer {
+    padding-top: 5px;
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 35px; 
+        padding: 0;
+        list-style-type: none;
+        position: fixed; 
+        left: 30px;      
+        top: 50%;        
+        transform: translateY(-50%); 
+        z-index: 1000;   
+        transition: 0.2s ease; 
+
+        li {
+            transition: 0.3s ease;
+
+            &:hover {
+                filter: drop-shadow(10px 10px 20px rgb(243, 245, 243)); 
+            }
+        }
+
+        @media (max-width: 768px) {
+            position: static !important;
+            flex-direction: row !important;
+            transform: none !important;
+            justify-content: center !important;
+            margin-top: 30px !important;
+            gap: 20px !important;
+        }
+    }
+}
+
+.menu-lista {
+    @media (max-width: 768px) {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+    }
+}
+
+.menuseleccion {
+    font-family: $font-chelsea; 
+    font-size: 30px;
+    font-weight: bold;
+    color: $color-hueso;
+    text-align: center;           
+    list-style-position: inside;  
+    list-style-type: none;
+    justify-content: center;                           
+    transition: 0.2s ease; 
+
+    &:hover {
+        filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+    }
+}
+
+main ol li {
+    list-style-type: none;
+    margin-bottom: 25px;   
+    font-size: 24px;       
+}
+
+/* ========================================= */
+/* 🖼️ COMPONENTES Y MULTIMEDIA                 */
+/* ========================================= */
+
+.botones {
+    font-family: $font-chelsea;
+    background-color: $verde-boton;
+    color: $color-hueso;
+    font-size: 14px; 
+    font-weight: 600; 
+    letter-spacing: 1.5px; 
+    border: 1px solid rgba(255, 255, 255, 0.192);
+    padding: 12px 24px; 
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none !important;
+
+    &:hover {
+        background-color: $verde-boton-hover; 
+    }
+}
+
+.botonesnosotros {
+    margin: 30px 0; 
+}
+
+.logo-principal {
+    filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
+    margin-bottom: 10px;
+    transition: 0.2s ease; 
+
+    &:hover {
+        filter: drop-shadow(15px 15px 30px rgb(73, 255, 2)); 
+    }
+}
+
+.imagenprincipal {
+    border-radius: 20px;
+    filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
+    transition: 0.2s ease;
+    margin: 40px 0; 
+
+    @media (max-width: 768px) {
+        width: 90% !important;
+        height: auto !important;
+        max-width: 400px;
+    }
+}
+
+.yo {
+    border-radius: 10px; 
+    filter: drop-shadow(10px 10px 20px rgb(10, 10, 10)); 
+    transition: 0.2s ease; 
+    margin-top: 20px;    
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6); 
+
+    @media (max-width: 768px) {
+        width: 90% !important;
+        height: auto !important;
+        max-width: 400px;
+    }
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    padding: 40px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+
+    iframe {
+        width: 100%; 
+        aspect-ratio: 16 / 9; 
+        border-radius: 15px; 
+        border: none; 
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); 
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05); 
+            filter: drop-shadow(0px 0px 15px $verde-brillo-alien); 
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr !important;
+        padding: 10px !important;
+    }
+}
+
+.carousel-inner iframe {
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+#videoCarousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
