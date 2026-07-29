@@ -1,341 +1,310 @@
-/*ID*/
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
+/* ========================================= */
+/* 🎨 VARIABLES GLOBALES                       */
+/* ========================================= */
+/* ========================================= */
+/* ⚙️ RESET Y CONFIGURACIÓN BASE               */
+/* ========================================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Hace que el padding y el borde se incluyan dentro del ancho y alto total del elemento */
-}
-
-    .home {
-    /* Usamos url() y apuntamos a la carpeta correcta con el nombre exacto */
-    background-image: url(../assets/imgs/space.jpg); 
-    background-repeat: no-repeat;
-    /* Cover asegura que no queden márgenes vacíos de ningún color */
-    background-size: cover; 
-    background-position: center;
-    /* Opcional: Esto fija el fondo para que el texto scrollee por encima (efecto parallax sutil) */
-    background-attachment: fixed; 
-}
-
-
-.imagenprincipal {
-    border-radius: 20px; /* Bordes redondeados */
-     filter: drop-shadow(10px 10px 20px rgb(37, 129, 1)); /* Ejemplo con un brillo verde estilo alienígena/matrix */
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
-    margin-top: 40px;    /* Despega la imagen del título superior */
-    margin-bottom: 40px;
-    
-}
-
-
-.titulo-principal {
-    font-family: "Orbitron", system-ui;
-    font-size: 60px; /* Un tamaño sutil */
-    letter-spacing: 30px; /* Separamos un poco las letras para dar 'respiro' */
-    color: #ffffff; /* Color de adentro de la letra */
-    -webkit-text-stroke: 1px #034b01; /* Borde de la letra: 1px de grosor, verde oscuro */
-    filter: drop-shadow(10px 10px 20px rgb(5, 143, 5)); 
-
-}
-
-
-.logo-principal {
-    filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
-    margin-bottom: 10px;
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
-    
-    
-}
-
-/* Opcional: Si quieres que la sombra cambie cuando el usuario pase el mouse por encima */
-.logo-principal:hover {
-    filter: drop-shadow(15px 15px 30px rgb(73, 255, 2)); /* Ejemplo con un brillo verde estilo alienígena/matrix */
-    
-}
-
-.botones {
-    font-family: "Chelsea Market", system-ui;
-    background-color: rgb(33, 46, 33); /* Un verde profundo pero legible */
-    color: antiquewhite;
-    font-family: "Chelsea Market", system-ui;
-    font-size: 14px; /* Un tamaño sutil */
-    font-weight: 600; /* Grosor medio, sin llegar a ser completamente Bold */
-    letter-spacing: 1.5px; /* Separamos un poco las letras para dar 'respiro' */
-    border: 1px solid rgba(255, 255, 255, 0.192); /* Sin borde para un look más limpio */
-    padding: 12px 24px; 
-    border-radius: 6px; /* Bordes redondeados modernos */
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    text-decoration: none !important;
-        
-}
-
-
-.botones:hover {
-    background-color: rgb(1, 68, 21); /* Se aclara sutilmente al pasar el mouse */
-}
-
-.botonesnosotros {
-    margin-bottom: 30px; 
-    margin-top: 30px; 
-}
-
-.frase {
-    margin-bottom: 40px;
-    margin-top: 40px;
-    text-shadow: 6px 6px 10px rgb(0, 0, 0); /* Agrega una sombra al texto para mejorar la legibilidad */
-    
-}
-
-.menuseleccion {
-    font-family: "Chelsea Market", system-ui; 
-    font-size: 30px; /* Aumenta el tamaño del texto */
-    font-weight: bold;
-    color:antiquewhite;
-    text-align: center;           /* Centra el texto */
-    list-style-position: inside;  /* Hace que el "punto" acompañe al texto hacia el centro */
-    list-style-type: none; /* Elimina los puntos de la lista */
-    justify-content: center;       /* Centra los iconos en medio de la pantalla */                   
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
-    
-}
-
-.menuseleccion:hover {
-    filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); /* Ejemplo con un brillo verde estilo alienígena/matrix */
-
-
-}
-
-/* Configuración de la cuadrícula principal */
-.contenedor-galeria {
-    display: grid;
-    /* Esto es clave: Crea 4 columnas del mismo ancho (1 fracción cada una) */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; /* Espacio entre los videos, tanto vertical como horizontal */
-    padding: 40px; 
-    max-width: 1400px; /* Evita que los videos se estiren demasiado en pantallas gigantes */
-    margin: 0 auto; /* Centra toda la galería en el medio de la página */
-}
-
-/* Estilo para los videos (iframes) individuales */
-.contenedor-galeria iframe {
-    width: 100%; /* Ocupa todo el ancho de su columna */
-    aspect-ratio: 16 / 9; /* Obliga a la caja a tener la proporción exacta de un video o cine */
-    border-radius: 15px; 
-    border: none; 
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); 
-    transition: 0.3s ease;
-}
-
-/* Un toque de interacción cuando el usuario pasa el mouse por un video */
-.contenedor-galeria iframe:hover {
-    transform: scale(1.05); /* Agranda el video un 5% */
-    filter: drop-shadow(0px 0px 15px rgba(1, 170, 29, 0.8)); /* Brillo verde alienígena */
-}
-
-
-
-header, main, footer {
-    padding: 25px 10px; /* Te da 40px de aire arriba y abajo, y 20px a los costados */
-}
-
-footer {
-    padding-top: 5px; /* Reducimos el aire superior del footer casi a cero */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;         /* Obliga al body a medir al menos el 100% del alto de tu pantalla */
-    background-color: #464d46; /* Usa el código de tu verde aquí. Al ponérselo al body, pintas todo el fondo */
-    text-align: center; 
-    font-weight: bold;
-    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto para mejorar la legibilidad */
-    font-size: 20px; /* Aumenta el tamaño del texto */
-    
+  min-height: 100vh;
+  background-color: #464d46;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
 }
 
-p{
-color: rgb(214, 219, 216);
-text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
-margin-bottom: 30px;
+.home {
+  background-image: url(../assets/imgs/space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-a{
-    color:antiquewhite;
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    font-family: 'Black Ops One', system-ui;
-}
-
-
-
+/* ========================================= */
+/* 📝 TIPOGRAFÍA Y TEXTOS                      */
+/* ========================================= */
 h1 {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 50px; /* Aumenta el tamaño del texto */
-    text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);   
-    margin-bottom: 30px;  
-    
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px !important;
+  }
+}
+
 h2 {
-    font-family: "Orbitron", system-ui;  
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto para mejorar la legibilidad */
-    font-size: 40px; /* Aumenta el tamaño del texto */
-    margin-bottom: 30px;
-    margin-top: 30px;
+  font-family: "Orbitron", system-ui;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  margin: 30px 0;
 }
 
-h3 { 
-    font-size: 30px; 
-    color:antiquewhite;
-    text-shadow: 6px 6px 8px rgb(0, 0, 0);
-    margin-bottom: 20px;
-    margin-top: 40px;
+h3 {
+  font-size: 30px;
+  color: antiquewhite;
+  text-shadow: 6px 6px 8px rgb(0, 0, 0);
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-h4 { 
-    font-size: 15px; 
-    color:antiquewhite;
-    text-shadow: 6px 6px 8px rgb(0, 0, 0);
-    margin-bottom: 40px;
+h4 {
+  font-size: 15px;
+  color: antiquewhite;
+  text-shadow: 6px 6px 8px rgb(0, 0, 0);
+  margin-bottom: 40px;
 }
 
-
-
-nav ul {
-    font-family: "Chelsea Market", system-ui;   
-    font-size: 40px; /* Aumenta el tamaño del texto */
-    font-weight: bold;
-    color:antiquewhite;
-    text-align: center;           /* Centra el texto */
-    list-style-position: inside;  /* Hace que el "punto" acompañe al texto hacia el centro */
-    list-style-type: none; /* Elimina los puntos de la lista */
-    display: flex;                 /* Convierte la lista en un contenedor flexible (horizontal) */
-    justify-content: center;       /* Centra los iconos en medio de la pantalla */
-    gap: 160px;                     /* Agrega un espacio de separación entre cada icono */
-    padding: 0;                    /* Quita el espacio extra que traen las listas por defecto */
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
-    filter:drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
+p {
+  color: rgb(214, 219, 216);
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
 }
 
+a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-family: "Black Ops One", system-ui;
+}
+
+.frase {
+  margin: 40px 0;
+  text-shadow: 6px 6px 10px rgb(0, 0, 0);
+}
+
+.titulo-principal {
+  font-family: "Orbitron", system-ui;
+  font-size: 60px;
+  letter-spacing: 30px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #034b01;
+  filter: drop-shadow(10px 10px 20px rgb(5, 143, 5));
+}
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 32px !important;
+    letter-spacing: 3px !important;
+  }
+}
+
+/* ========================================= */
+/* 🏗️ ESTRUCTURA Y NAVEGACIÓN                  */
+/* ========================================= */
+header, main, footer {
+  padding: 25px 10px;
+}
+
+/* --- MENÚ PRINCIPAL (HEADER) --- */
+header nav ul {
+  font-family: "Chelsea Market", system-ui;
+  font-size: 40px;
+  font-weight: bold;
+  color: antiquewhite;
+  text-align: center;
+  list-style-position: inside;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  padding: 0;
+  transition: 0.2s ease;
+  filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
+}
+header nav ul li {
+  filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));
+  transition: 0.2s ease;
+}
+header nav ul li:hover {
+  filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column !important;
+    gap: 15px !important;
+    align-items: center !important;
+  }
+}
+
+/* --- MENÚ FLOTANTE (FOOTER / REDES) --- */
+footer {
+  padding-top: 5px;
+}
 footer nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 35px; 
-    padding: 0;
-    list-style-type: none;
-    /* --- LA MAGIA PARA FLOTAR A LA IZQUIERDA --- */
-    position: fixed; /* Saca la lista del footer y la ancla a la pantalla */
-    left: 30px;      /* La pega al margen izquierdo dejando 20px de respiro */
-    top: 50%;        /* La empuja hasta la mitad exacta de la pantalla... */
-    transform: translateY(-50%); /* ...y esto centra el bloque perfectamente en el eje vertical */
-    z-index: 1000;   /* Asegura que los íconos siempre floten por encima de cualquier otra imagen o texto */
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0;
+  list-style-type: none;
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.2s ease;
+  font-size: 16px; /* Evita que el texto gigante se herede si falla una imagen */
 }
-
 footer nav ul li {
-    transition: 0.3s ease;
+  transition: 0.3s ease;
+  filter: none; /* Quitamos el brillo verde base para que no ensucie los íconos */
 }
-
 footer nav ul li:hover {
-    filter: drop-shadow(10px 10px 20px rgb(243, 245, 243)); /* Ejemplo con un brillo verde estilo alienígena/matrix */
+  filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+}
+@media (max-width: 768px) {
+  footer nav ul {
+    position: static !important;
+    flex-direction: row !important;
+    transform: none !important;
+    justify-content: center !important;
+    margin-top: 30px !important;
+    gap: 20px !important;
+  }
 }
 
-nav ul li {
-    filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));    
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
-    
+@media (max-width: 768px) {
+  .menu-lista {
+    flex-direction: column !important;
+    gap: 15px !important;
+    align-items: center !important;
+  }
 }
 
-/* Opcional: Si quieres que la sombra cambie cuando el usuario pase el mouse por encima */
-nav ul li:hover {
-    filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); /* Ejemplo con un brillo verde estilo alienígena/matrix */
-    transition: 0.3s ease; /* Hace que el cambio sea suave */}
-
+.menuseleccion {
+  font-family: "Chelsea Market", system-ui;
+  font-size: 30px;
+  font-weight: bold;
+  color: antiquewhite;
+  text-align: center;
+  list-style-position: inside;
+  list-style-type: none;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+.menuseleccion:hover {
+  filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+}
 
 main ol li {
-    list-style-type: none; /* Te quita los números de la lista */
-    margin-bottom: 25px;   /* ¡Esta es la magia! Le da 30px de espacio libre debajo a cada caso */
-    font-size: 24px;       /* Opcional: te sugiero este tamaño para que los títulos de los casos resalten bien */
+  list-style-type: none;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* ========================================= */
+/* 🖼️ COMPONENTES Y MULTIMEDIA                 */
+/* ========================================= */
+.botones {
+  font-family: "Chelsea Market", system-ui;
+  background-color: rgb(33, 46, 33);
+  color: antiquewhite;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none !important;
+}
+.botones:hover {
+  background-color: rgb(1, 68, 21);
+}
+
+.botonesnosotros {
+  margin: 30px 0;
+}
+
+.logo-principal {
+  filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
+  margin-bottom: 10px;
+  transition: 0.2s ease;
+}
+.logo-principal:hover {
+  filter: drop-shadow(15px 15px 30px rgb(73, 255, 2));
+}
+
+.imagenprincipal {
+  border-radius: 20px;
+  filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
+  transition: 0.2s ease;
+  margin: 40px 0;
+}
+@media (max-width: 768px) {
+  .imagenprincipal {
+    width: 90% !important;
+    height: auto !important;
+    max-width: 400px;
+  }
 }
 
 .yo {
-   border-radius: 20px; /* Bordes redondeados */
-     filter: drop-shadow(10px 10px 20px rgb(10, 10, 10)); /* Ejemplo con un brillo verde estilo alienígena/matrix */
-    transition: 0.2s ease; /* Hace que el cambio sea suave */
-    margin-top: 20px;    /* Despega la imagen del título superior */
-    margin-bottom: 40px;
-    border-radius: 10px; /* Suaviza un poco las esquinas para que no sean tan filosas */
-    box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6); /* El brillo verde difuminado */
+  border-radius: 10px;
+  filter: drop-shadow(10px 10px 20px rgb(10, 10, 10));
+  transition: 0.2s ease;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6);
 }
-
-/* Ajuste para que los videos dentro del carrusel mantengan tu estilo */
-.carousel-inner iframe {
-    aspect-ratio: 16 / 9;
-    border-radius: 15px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
-}
-
-/* Opcional: Centrar el carrusel en pantallas grandes */
-#videoCarousel {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-/* ========================================= */
-/* 📱 MEDIA QUERIES PARA CELULARES Y MÓVILES */
-/* ========================================= */
 @media (max-width: 768px) {
-
-    /* 1. Reducir los títulos principales para que no se corten */
-    .titulo-principal {
-        font-size: 32px !important;
-        letter-spacing: 3px !important;
-    }
-
-    h1 {
-        font-size: 30px !important;
-    }
-
-    /* 2. Ajustar el menú de navegación superior (botones) */
-    .menu-lista, header nav ul {
-        flex-direction: column !important;
-        gap: 15px !important;
-        align-items: center !important;
-    }
-
-    /* 3. Devolver las redes sociales del footer a la parte inferior y horizontal */
-    footer nav ul {
-        position: static !important;
-        flex-direction: row !important;
-        transform: none !important;
-        justify-content: center !important;
-        margin-top: 30px !important;
-        gap: 20px !important;
-    }
-
-    /* 4. Asegurar que las imágenes y videos se adapten al ancho de la pantalla del celular */
-    .imagenprincipal, .yo {
-        width: 90% !important;
-        height: auto !important;
-        max-width: 400px;
-    }
-
-    .contenedor-galeria {
-        grid-template-columns: 1fr !important;
-        padding: 10px !important;
-    }
+  .yo {
+    width: 90% !important;
+    height: auto !important;
+    max-width: 400px;
+  }
 }
 
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.contenedor-galeria iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease;
+}
+.contenedor-galeria iframe:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 15px rgba(1, 170, 29, 0.8));
+}
+@media (max-width: 768px) {
+  .contenedor-galeria {
+    grid-template-columns: 1fr !important;
+    padding: 10px !important;
+  }
+}
 
+.carousel-inner iframe {
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+}
 
-
-
-
-
-
-
-
+#videoCarousel {
+  max-width: 800px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

@@ -129,40 +129,42 @@ header, main, footer {
     padding: 25px 10px;
 }
 
-nav ul {
-    font-family: $font-chelsea;   
-    font-size: 40px; 
-    font-weight: bold;
-    color: $color-hueso;
-    text-align: center;           
-    list-style-position: inside;  
-    list-style-type: none; 
-    display: flex;                
-    justify-content: center;      
-    gap: 160px;                   
-    padding: 0;                    
-    transition: 0.2s ease; 
-    filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
-
-    li {
-        filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));    
+/* --- MENÚ PRINCIPAL (HEADER) --- */
+header {
+    nav ul {
+        font-family: $font-chelsea;   
+        font-size: 40px; 
+        font-weight: bold;
+        color: $color-hueso;
+        text-align: center;           
+        list-style-position: inside;  
+        list-style-type: none; 
+        display: flex;                
+        justify-content: center;      
+        gap: 160px;                   
+        padding: 0;                    
         transition: 0.2s ease; 
+        filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
 
-        &:hover {
-            filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); 
-            transition: 0.3s ease; 
+        li {
+            filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));    
+            transition: 0.2s ease; 
+
+            &:hover {
+                filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); 
+                transition: 0.3s ease; 
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column !important;
+            gap: 15px !important;
+            align-items: center !important;
         }
     }
 }
 
-header nav ul {
-    @media (max-width: 768px) {
-        flex-direction: column !important;
-        gap: 15px !important;
-        align-items: center !important;
-    }
-}
-
+/* --- MENÚ FLOTANTE (FOOTER / REDES) --- */
 footer {
     padding-top: 5px;
 
@@ -178,9 +180,11 @@ footer {
         transform: translateY(-50%); 
         z-index: 1000;   
         transition: 0.2s ease; 
+        font-size: 16px; /* Evita que el texto gigante se herede si falla una imagen */
 
         li {
             transition: 0.3s ease;
+            filter: none; /* Quitamos el brillo verde base para que no ensucie los íconos */
 
             &:hover {
                 filter: drop-shadow(10px 10px 20px rgb(243, 245, 243)); 
