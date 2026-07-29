@@ -1,0 +1,75 @@
+/* ========================================= */
+/* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
+/* ========================================= */
+
+main.container {
+    // Estilos específicos para el carrusel de videos
+    #videoCarousel {
+        max-width: 800px; // Agrandamos el límite máximo para que se disfruten mejor los videos
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(33, 46, 33, 0.4); // Fondo difuminado estilo bunker
+        border-radius: 20px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(1, 170, 29, 0.2);
+
+        .carousel-inner {
+            iframe {
+                aspect-ratio: 16 / 9;
+                border-radius: 15px;
+                box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+                transition: transform 0.3s ease, filter 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.01);
+                    filter: drop-shadow(0px 0px 15px $verde-brillo-alien);
+                }
+            }
+        }
+
+        // Estilos para los botones de control (prev / next)
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 8%; // Ajustamos el ancho para que no tape los costados del video
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            span {
+                filter: drop-shadow(0px 0px 8px $verde-brillo-alien); // Brillo verde a las flechas
+            }
+        }
+    }
+}
+
+// Mantenemos la grilla de videos por si se usa en otros sectores de la galería
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    padding: 40px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+
+    iframe {
+        width: 100%; 
+        aspect-ratio: 16 / 9; 
+        border-radius: 15px; 
+        border: none; 
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); 
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05); 
+            filter: drop-shadow(0px 0px 15px $verde-brillo-alien); 
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr !important;
+        padding: 10px !important;
+    }
+}

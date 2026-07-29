@@ -1,0 +1,120 @@
+/* ========================================= */
+/* 🛸 ESTILOS DE PÁGINA: CONTACTO            */
+/* ========================================= */
+
+// 1. Estilos para el mapa (iframe)
+main section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+
+    iframe {
+        border-radius: 15px;
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+        transition: 0.3s ease;
+        max-width: 100%;
+        border: 2px solid rgba(1, 170, 29, 0.3) !important; // Borde sutil verde
+
+        &:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0px 0px 15px $verde-brillo-alien);
+        }
+    }
+}
+
+// 2. Estilos para el formulario
+form {
+    background-color: rgba(33, 46, 33, 0.6); // Fondo verde oscuro semi-transparente
+    border: 1px solid rgba(1, 170, 29, 0.3); // Borde alien
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto 40px auto; // Centra el formulario en la pantalla
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+
+    label {
+        color: $color-hueso;
+        font-family: $font-chelsea;
+        font-size: 20px;
+        text-align: left;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    // Agrupamos todos los campos de texto para estilizarlos igual
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        background-color: #2c332c;
+        border: 1px solid $verde-borde;
+        border-radius: 8px;
+        padding: 12px;
+        color: $color-blanco;
+        font-family: system-ui, sans-serif;
+        font-size: 16px;
+        transition: 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $verde-brillo-alien;
+            box-shadow: 0px 0px 10px rgba(1, 170, 29, 0.5);
+        }
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical; // Permite agrandar solo hacia abajo, no a los costados
+    }
+
+    // Contenedor inferior (Botón + Checkbox)
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; // Pone el botón a un lado y el checkbox al otro
+        margin-top: 20px;
+        flex-wrap: wrap; // Evita que se rompa en celulares
+        gap: 15px;
+
+        input[type="submit"] {
+            background-color: $verde-boton;
+            color: $color-hueso;
+            font-family: $font-chelsea;
+            font-size: 16px;
+            padding: 12px 24px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.192);
+            cursor: pointer;
+            transition: 0.2s ease;
+
+            &:hover {
+                background-color: $verde-boton-hover;
+                filter: drop-shadow(0 0 10px $verde-brillo-alien);
+            }
+        }
+
+        // Contenedor interno solo para alinear el checkbox con su texto
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                accent-color: #ff4d4d; // Pinta la tilde de rojo (en navegadores modernos)
+            }
+
+            label[for="destroy humanity"] {
+                font-size: 16px;
+                color: #ff4d4d; // Un rojo de advertencia
+                font-family: $font-orbitron; // Le damos toque sci-fi
+                text-shadow: 2px 2px 5px black;
+                margin: 0; // Reseteamos el margen para que quede centrado con el checkbox
+            }
+        }
+    }
+}
