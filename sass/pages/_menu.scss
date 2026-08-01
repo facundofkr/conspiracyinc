@@ -1,0 +1,37 @@
+/* ========================================= */
+/* 📂 ESTILOS DE PÁGINA: CASOS (MENU)        */
+/* ========================================= */
+
+main {
+    ol {
+        padding: 20px 0;
+        margin: 0 auto;
+        max-width: 800px; // Centra y acota el ancho de la lista en pantallas grandes
+
+        li {
+            list-style-type: none; // Mantiene la remoción de números del CSS base
+            margin-bottom: 25px;   
+            font-size: 24px;       
+            
+            // Estilos específicos para los enlaces de la lista
+            .menuseleccion {
+                font-family: $font-chelsea; 
+                font-size: 30px;
+                font-weight: bold;
+                color: $color-hueso;
+                text-align: center;           
+                list-style-position: inside;  
+                list-style-type: none;
+                justify-content: center;                           
+                transition: 0.2s ease; 
+                display: inline-block; // Permite que el hover y los filtros se apliquen mejor
+
+                &:hover {
+                    filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+                    transform: scale(1.03); // Un sutil efecto de agrandado al pasar el mouse
+                    color: $color-blanco; // Cambia levemente a blanco para dar feedback visual
+                }
+            }
+        }
+    }
+}

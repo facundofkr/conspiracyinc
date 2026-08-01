@@ -1,0 +1,25 @@
+// 1. UTILIDADES (Variables y Mixins primero para que el resto pueda usarlos)
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/reset';
+
+// 2. COMPONENTES (Elementos que se repiten)
+@import 'components/header';
+@import 'components/footer';
+
+// 3. PÁGINAS (Estilos específicos de cada sección)
+@import 'pages/contacto';
+@import 'pages/galeria';
+@import 'pages/menu';
+@import 'pages/nosotros';
+
+// Control estricto de tamaños (Reemplaza los estilos en línea eliminados)
+.logo-principal {
+    height: 10vh;
+    width: auto;
+}
+
+.icono-redes {
+    height: 5vh;
+    width: auto;
+}

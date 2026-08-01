@@ -308,3 +308,8 @@ main ol li {
   max-width: 800px;
   margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
+
+
+form label {
+    color: #ffffff !important;
+}
