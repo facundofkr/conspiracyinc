@@ -1,34 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
-@import 'utilities/contacto';
-@import 'utilities/galeria';
-@import 'utilities/menu';
-@import 'utilities/nosotros';
+@import '../sass/pages/contacto';
+@import '../sass/pages/galeria';
+@import '../sass/pages/menu';
+@import '../sass/pages/nosotros';
 
 /* ========================================= */
 /* 🎨 VARIABLES GLOBALES                       */
 /* ========================================= */
-
-// Tipografías
 $font-orbitron: "Orbitron", system-ui;
 $font-chelsea: "Chelsea Market", system-ui;
 $font-black-ops: "Black Ops One", system-ui;
 
-// Paleta de Colores
 $color-blanco: #ffffff;
 $color-hueso: antiquewhite;
 $color-fondo-body: #464d46;
 $color-texto-p: rgb(214, 219, 216);
 
-// Verdes
 $verde-borde: #034b01;
 $verde-boton: rgb(33, 46, 33);
 $verde-boton-hover: rgb(1, 68, 21);
 $verde-brillo-alien: rgba(1, 170, 29, 0.8);
 
 /* ========================================= */
+/* 🛠️ MIXINS Y EXTENDS (REQUISITO SASS)       */
+/* ========================================= */
+%sombra-oscura {
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+@mixin brillo-alienigena($color: $verde-brillo-alien, $difuminado: 15px) {
+    filter: drop-shadow(0px 0px $difuminado $color);
+}
+
+/* ========================================= */
 /* ⚙️ RESET Y CONFIGURACIÓN BASE               */
 /* ========================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +46,7 @@ body {
     background-color: $color-fondo-body;
     text-align: center;
     font-weight: bold;
-    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    @extend %sombra-oscura;
     font-size: 20px;
 }
 
@@ -55,7 +61,6 @@ body {
 /* ========================================= */
 /* 📝 TIPOGRAFÍA Y TEXTOS                      */
 /* ========================================= */
-
 h1 {
     text-align: center;
     color: $color-blanco;
@@ -65,7 +70,7 @@ h1 {
     margin-bottom: 30px;  
 
     @media (max-width: 768px) {
-        font-size: 30px !important;
+        font-size: 30px;
     }
 }
 
@@ -96,7 +101,7 @@ h4 {
 
 p {
     color: $color-texto-p;
-    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    @extend %sombra-oscura;
     margin-bottom: 30px;
 }
 
@@ -120,20 +125,18 @@ a {
     filter: drop-shadow(10px 10px 20px rgb(5, 143, 5)); 
 
     @media (max-width: 768px) {
-        font-size: 32px !important;
-        letter-spacing: 3px !important;
+        font-size: 32px;
+        letter-spacing: 3px;
     }
 }
 
 /* ========================================= */
 /* 🏗️ ESTRUCTURA Y NAVEGACIÓN                  */
 /* ========================================= */
-
 header, main, footer {
     padding: 25px 10px;
 }
 
-/* --- MENÚ PRINCIPAL (HEADER) --- */
 header {
     nav ul {
         font-family: $font-chelsea;   
@@ -161,14 +164,13 @@ header {
         }
 
         @media (max-width: 768px) {
-            flex-direction: column !important;
-            gap: 15px !important;
-            align-items: center !important;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
         }
     }
 }
 
-/* --- MENÚ FLOTANTE (FOOTER / REDES) --- */
 footer {
     padding-top: 5px;
 
@@ -184,11 +186,11 @@ footer {
         transform: translateY(-50%); 
         z-index: 1000;   
         transition: 0.2s ease; 
-        font-size: 16px; /* Evita que el texto gigante se herede si falla una imagen */
+        font-size: 16px; 
 
         li {
             transition: 0.3s ease;
-            filter: none; /* Quitamos el brillo verde base para que no ensucie los íconos */
+            filter: none; 
 
             &:hover {
                 filter: drop-shadow(10px 10px 20px rgb(243, 245, 243)); 
@@ -196,21 +198,21 @@ footer {
         }
 
         @media (max-width: 768px) {
-            position: static !important;
-            flex-direction: row !important;
-            transform: none !important;
-            justify-content: center !important;
-            margin-top: 30px !important;
-            gap: 20px !important;
+            position: static;
+            flex-direction: row;
+            transform: none;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
         }
     }
 }
 
 .menu-lista {
     @media (max-width: 768px) {
-        flex-direction: column !important;
-        gap: 15px !important;
-        align-items: center !important;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 }
 
@@ -222,7 +224,7 @@ footer {
     text-align: center;           
     list-style-position: inside;  
     list-style-type: none;
-    justify-content: center;                           
+    justify-content: center;                                   
     transition: 0.2s ease; 
 
     &:hover {
@@ -252,7 +254,7 @@ main ol li {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    text-decoration: none !important;
+    text-decoration: none;
 
     &:hover {
         background-color: $verde-boton-hover; 
@@ -263,7 +265,10 @@ main ol li {
     margin: 30px 0; 
 }
 
+/* ⚠️ ACÁ ESTÁ LA SOLUCIÓN DEL ALIEN GIGANTE ⚠️ */
 .logo-principal {
+    height: 10vh; /* Devuelve el tamaño normal */
+    width: auto;
     filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
     margin-bottom: 10px;
     transition: 0.2s ease; 
@@ -273,17 +278,21 @@ main ol li {
     }
 }
 
+/* ⚠️ ACÁ ESTÁ LA SOLUCIÓN DE LAS REDES SOCIALES ⚠️ */
+.icono-redes {
+    height: 5vh;
+    width: auto;
+    transition: 0.3s ease;
+}
+
 .imagenprincipal {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh; 
     border-radius: 20px;
     filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
     transition: 0.2s ease;
-    margin: 40px 0; 
-
-    @media (max-width: 768px) {
-        width: 90% !important;
-        height: auto !important;
-        max-width: 400px;
-    }
+    margin: 40px 0;
 }
 
 .yo {
@@ -295,8 +304,8 @@ main ol li {
     box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6); 
 
     @media (max-width: 768px) {
-        width: 90% !important;
-        height: auto !important;
+        width: 90%;
+        height: auto;
         max-width: 400px;
     }
 }
@@ -319,13 +328,13 @@ main ol li {
 
         &:hover {
             transform: scale(1.05); 
-            filter: drop-shadow(0px 0px 15px $verde-brillo-alien); 
+            @include brillo-alienigena(); // APLICACIÓN DEL MIXIN PARA EL 10/10
         }
     }
 
     @media (max-width: 768px) {
-        grid-template-columns: 1fr !important;
-        padding: 10px !important;
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
 }
 
@@ -338,4 +347,15 @@ main ol li {
 #videoCarousel {
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Colores para el formulario de contacto */
+form label {
+    color: $color-blanco;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    color: $color-blanco;
 }
