@@ -1,10 +1,263 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
 /* ========================================= */
-/* 🎨 VARIABLES GLOBALES                       */
+/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
 /* ========================================= */
 /* ========================================= */
-/* ⚙️ RESET Y CONFIGURACIÓN BASE               */
+/* 2. 🛠️ MIXINS Y EXTENDS                     */
+/* ========================================= */
+p, body {
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================= */
+/* 3. 📦 IMPORTS (DESPUÉS DE LAS VARIABLES)    */
+/* ========================================= */
+/* ========================================= */
+/* 🛸 ESTILOS DE PÁGINA: CONTACTO            */
+/* ========================================= */
+main section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+main section iframe {
+  border-radius: 15px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease;
+  max-width: 100%;
+  border: 2px solid rgba(1, 170, 29, 0.3) !important;
+}
+main section iframe:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0px 0px 15px rgba(1, 170, 29, 0.8));
+}
+
+form {
+  background-color: rgba(33, 46, 33, 0.6);
+  border: 1px solid rgba(1, 170, 29, 0.3);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+form label {
+  color: antiquewhite;
+  font-family: "Chelsea Market", system-ui;
+  font-size: 20px;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  background-color: #2c332c;
+  border: 1px solid #034b01;
+  border-radius: 8px;
+  padding: 12px;
+  color: #ffffff;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: rgba(1, 170, 29, 0.8);
+  box-shadow: 0px 0px 10px rgba(1, 170, 29, 0.5);
+}
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+form div input[type=submit] {
+  background-color: rgb(33, 46, 33);
+  color: antiquewhite;
+  font-family: "Chelsea Market", system-ui;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+form div input[type=submit]:hover {
+  background-color: rgb(1, 68, 21);
+  filter: drop-shadow(0 0 10px rgba(1, 170, 29, 0.8));
+}
+form div .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form div .checkbox-container input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ff4d4d;
+}
+form div .checkbox-container label[for="destroy humanity"] {
+  font-size: 16px;
+  color: #ff4d4d;
+  font-family: "Orbitron", system-ui;
+  text-shadow: 2px 2px 5px black;
+  margin: 0;
+}
+
+/* ========================================= */
+/* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
+/* ========================================= */
+main.container #videoCarousel {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(33, 46, 33, 0.4);
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(1, 170, 29, 0.2);
+}
+main.container #videoCarousel .carousel-inner iframe {
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+main.container #videoCarousel .carousel-inner iframe:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0px 0px 15px rgba(1, 170, 29, 0.8));
+}
+main.container #videoCarousel .carousel-control-prev,
+main.container #videoCarousel .carousel-control-next {
+  width: 8%;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+main.container #videoCarousel .carousel-control-prev:hover,
+main.container #videoCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
+main.container #videoCarousel .carousel-control-prev span,
+main.container #videoCarousel .carousel-control-next span {
+  filter: drop-shadow(0px 0px 8px rgba(1, 170, 29, 0.8));
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.contenedor-galeria iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease;
+}
+.contenedor-galeria iframe:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 15px rgba(1, 170, 29, 0.8));
+}
+@media (max-width: 768px) {
+  .contenedor-galeria {
+    grid-template-columns: 1fr !important;
+    padding: 10px !important;
+  }
+}
+
+/* ========================================= */
+/* 📂 ESTILOS DE PÁGINA: CASOS (MENU)        */
+/* ========================================= */
+main ol {
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+main ol li {
+  list-style-type: none;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+main ol li .menuseleccion {
+  font-family: "Chelsea Market", system-ui;
+  font-size: 30px;
+  font-weight: bold;
+  color: antiquewhite;
+  text-align: center;
+  list-style-position: inside;
+  list-style-type: none;
+  justify-content: center;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+main ol li .menuseleccion:hover {
+  filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+  transform: scale(1.03);
+  color: #ffffff;
+}
+
+/* ========================================= */
+/* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
+/* ========================================= */
+.yo {
+  display: inline-block;
+  border-radius: 10px;
+  filter: drop-shadow(10px 10px 20px rgb(10, 10, 10));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto 40px auto;
+  box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6);
+  overflow: hidden;
+}
+.yo img {
+  display: block;
+  height: 50vh;
+  width: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.yo:hover {
+  box-shadow: 0px 0px 30px rgba(1, 170, 29, 0.8);
+  transform: translateY(-5px);
+}
+.yo:hover img {
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .yo {
+    width: 90% !important;
+    height: auto !important;
+    max-width: 400px;
+  }
+  .yo img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+header nav.nav-nosotros {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+/* ========================================= */
+/* 4. ⚙️ RESET Y CONFIGURACIÓN BASE           */
 /* ========================================= */
 * {
   margin: 0;
@@ -17,7 +270,6 @@ body {
   background-color: #464d46;
   text-align: center;
   font-weight: bold;
-  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
   font-size: 20px;
 }
 
@@ -30,7 +282,7 @@ body {
 }
 
 /* ========================================= */
-/* 📝 TIPOGRAFÍA Y TEXTOS                      */
+/* 5. 📝 TIPOGRAFÍA Y TEXTOS                   */
 /* ========================================= */
 h1 {
   text-align: center;
@@ -42,7 +294,7 @@ h1 {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 30px !important;
+    font-size: 30px;
   }
 }
 
@@ -73,7 +325,6 @@ h4 {
 
 p {
   color: rgb(214, 219, 216);
-  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
 
@@ -98,19 +349,18 @@ a {
 }
 @media (max-width: 768px) {
   .titulo-principal {
-    font-size: 32px !important;
-    letter-spacing: 3px !important;
+    font-size: 32px;
+    letter-spacing: 3px;
   }
 }
 
 /* ========================================= */
-/* 🏗️ ESTRUCTURA Y NAVEGACIÓN                  */
+/* 6. 🏗️ ESTRUCTURA Y NAVEGACIÓN               */
 /* ========================================= */
 header, main, footer {
   padding: 25px 10px;
 }
 
-/* --- MENÚ PRINCIPAL (HEADER) --- */
 header nav ul {
   font-family: "Chelsea Market", system-ui;
   font-size: 40px;
@@ -136,13 +386,12 @@ header nav ul li:hover {
 }
 @media (max-width: 768px) {
   header nav ul {
-    flex-direction: column !important;
-    gap: 15px !important;
-    align-items: center !important;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
 }
 
-/* --- MENÚ FLOTANTE (FOOTER / REDES) --- */
 footer {
   padding-top: 5px;
 }
@@ -158,31 +407,31 @@ footer nav ul {
   transform: translateY(-50%);
   z-index: 1000;
   transition: 0.2s ease;
-  font-size: 16px; /* Evita que el texto gigante se herede si falla una imagen */
+  font-size: 16px;
 }
 footer nav ul li {
   transition: 0.3s ease;
-  filter: none; /* Quitamos el brillo verde base para que no ensucie los íconos */
+  filter: none;
 }
 footer nav ul li:hover {
   filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
 }
 @media (max-width: 768px) {
   footer nav ul {
-    position: static !important;
-    flex-direction: row !important;
-    transform: none !important;
-    justify-content: center !important;
-    margin-top: 30px !important;
-    gap: 20px !important;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .menu-lista {
-    flex-direction: column !important;
-    gap: 15px !important;
-    align-items: center !important;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
 }
 
@@ -208,7 +457,7 @@ main ol li {
 }
 
 /* ========================================= */
-/* 🖼️ COMPONENTES Y MULTIMEDIA                 */
+/* 7. 🖼️ COMPONENTES Y MULTIMEDIA              */
 /* ========================================= */
 .botones {
   font-family: "Chelsea Market", system-ui;
@@ -222,7 +471,7 @@ main ol li {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 .botones:hover {
   background-color: rgb(1, 68, 21);
@@ -233,6 +482,8 @@ main ol li {
 }
 
 .logo-principal {
+  height: 10vh;
+  width: auto;
   filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
   margin-bottom: 10px;
   transition: 0.2s ease;
@@ -241,18 +492,20 @@ main ol li {
   filter: drop-shadow(15px 15px 30px rgb(73, 255, 2));
 }
 
+.icono-redes {
+  height: 5vh;
+  width: auto;
+  transition: 0.3s ease;
+}
+
 .imagenprincipal {
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh;
   border-radius: 20px;
   filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
   transition: 0.2s ease;
   margin: 40px 0;
-}
-@media (max-width: 768px) {
-  .imagenprincipal {
-    width: 90% !important;
-    height: auto !important;
-    max-width: 400px;
-  }
 }
 
 .yo {
@@ -265,8 +518,8 @@ main ol li {
 }
 @media (max-width: 768px) {
   .yo {
-    width: 90% !important;
-    height: auto !important;
+    width: 90%;
+    height: auto;
     max-width: 400px;
   }
 }
@@ -293,8 +546,8 @@ main ol li {
 }
 @media (max-width: 768px) {
   .contenedor-galeria {
-    grid-template-columns: 1fr !important;
-    padding: 10px !important;
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
 }
 
@@ -307,9 +560,14 @@ main ol li {
 #videoCarousel {
   max-width: 800px;
   margin: 0 auto;
-}/*# sourceMappingURL=style.css.map */
-
+}
 
 form label {
-    color: #ffffff !important;
+  color: #ffffff;
 }
+
+form input[type=text],
+form input[type=email],
+form textarea {
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */

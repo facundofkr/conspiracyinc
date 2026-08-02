@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
-@import '../sass/pages/contacto';
-@import '../sass/pages/galeria';
-@import '../sass/pages/menu';
-@import '../sass/pages/nosotros';
 
 /* ========================================= */
-/* 🎨 VARIABLES GLOBALES                       */
+/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
 /* ========================================= */
 $font-orbitron: "Orbitron", system-ui;
 $font-chelsea: "Chelsea Market", system-ui;
@@ -22,7 +18,7 @@ $verde-boton-hover: rgb(1, 68, 21);
 $verde-brillo-alien: rgba(1, 170, 29, 0.8);
 
 /* ========================================= */
-/* 🛠️ MIXINS Y EXTENDS (REQUISITO SASS)       */
+/* 2. 🛠️ MIXINS Y EXTENDS                     */
 /* ========================================= */
 %sombra-oscura {
     text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
@@ -33,7 +29,15 @@ $verde-brillo-alien: rgba(1, 170, 29, 0.8);
 }
 
 /* ========================================= */
-/* ⚙️ RESET Y CONFIGURACIÓN BASE               */
+/* 3. 📦 IMPORTS (DESPUÉS DE LAS VARIABLES)    */
+/* ========================================= */
+@import '../sass/pages/contacto';
+@import '../sass/pages/galeria';
+@import '../sass/pages/menu';
+@import '../sass/pages/nosotros';
+
+/* ========================================= */
+/* 4. ⚙️ RESET Y CONFIGURACIÓN BASE           */
 /* ========================================= */
 * {
     margin: 0;
@@ -59,7 +63,7 @@ body {
 }
 
 /* ========================================= */
-/* 📝 TIPOGRAFÍA Y TEXTOS                      */
+/* 5. 📝 TIPOGRAFÍA Y TEXTOS                   */
 /* ========================================= */
 h1 {
     text-align: center;
@@ -131,7 +135,7 @@ a {
 }
 
 /* ========================================= */
-/* 🏗️ ESTRUCTURA Y NAVEGACIÓN                  */
+/* 6. 🏗️ ESTRUCTURA Y NAVEGACIÓN               */
 /* ========================================= */
 header, main, footer {
     padding: 25px 10px;
@@ -239,7 +243,7 @@ main ol li {
 }
 
 /* ========================================= */
-/* 🖼️ COMPONENTES Y MULTIMEDIA                 */
+/* 7. 🖼️ COMPONENTES Y MULTIMEDIA              */
 /* ========================================= */
 
 .botones {
@@ -265,9 +269,8 @@ main ol li {
     margin: 30px 0; 
 }
 
-/* ⚠️ ACÁ ESTÁ LA SOLUCIÓN DEL ALIEN GIGANTE ⚠️ */
 .logo-principal {
-    height: 10vh; /* Devuelve el tamaño normal */
+    height: 10vh; 
     width: auto;
     filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
     margin-bottom: 10px;
@@ -278,7 +281,6 @@ main ol li {
     }
 }
 
-/* ⚠️ ACÁ ESTÁ LA SOLUCIÓN DE LAS REDES SOCIALES ⚠️ */
 .icono-redes {
     height: 5vh;
     width: auto;
@@ -328,7 +330,7 @@ main ol li {
 
         &:hover {
             transform: scale(1.05); 
-            @include brillo-alienigena(); // APLICACIÓN DEL MIXIN PARA EL 10/10
+            @include brillo-alienigena(); 
         }
     }
 
@@ -349,7 +351,6 @@ main ol li {
     margin: 0 auto;
 }
 
-/* Colores para el formulario de contacto */
 form label {
     color: $color-blanco;
 }
