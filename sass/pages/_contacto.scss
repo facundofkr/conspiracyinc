@@ -136,3 +136,70 @@
         }
     }
 }
+
+/* ========================================= */
+/* 🛸 VENTANA EMERGENTE (MODAL)              */
+/* ========================================= */
+.modal-container {
+    display: none; // Fundamental: se mantiene invisible hasta que JavaScript le da la orden
+    position: fixed; // Se queda fijo en la pantalla aunque hagas scroll
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); // Fondo oscuro semitransparente
+    z-index: 2000; // Lo pone por encima de absolutamente todo
+    justify-content: center;
+    align-items: center;
+
+    &.activo {
+        display: flex; // Cuando JS le agrega la clase "activo", aparece mágicamente
+    }
+
+    .modal-content {
+        background-color: #2c332c;
+        border: 2px solid rgba(1, 170, 29, 0.8);
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0px 0px 30px rgba(1, 170, 29, 0.5);
+        animation: aparecer 0.3s ease-out; // Un efectito de entrada
+
+        p {
+            font-family: $font-orbitron;
+            color: $color-blanco;
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        button {
+            background-color: $verde-boton;
+            color: $color-hueso;
+            font-family: $font-chelsea;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.192);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s ease;
+
+            &:hover {
+                background-color: $verde-boton-hover;
+                filter: drop-shadow(0 0 10px $verde-brillo-alien);
+            }
+        }
+    }
+}
+
+// Pequeña animación para que no aparezca de golpe
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
