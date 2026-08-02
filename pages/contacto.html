@@ -35,35 +35,36 @@
     </header>
 
     <main>
-        <section>
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.717516558656!2d-105.33477959999999!3d33.9226692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x871e6b6a86ca6e4f%3A0xf45d9ca3d5199646!2sTranswestern%20Pipeline%20Number%208%20Airport!5e0!3m2!1sen!2sar!4v1780792428338!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="500" height="350"></iframe> -->
-        </section>
-
-        <form action="">
-            <!-- Dos etiquetas principales: label e input -->
+        <div class="contacto-container">
             
-            <label for="name">Raza:</label>
-            <input type="text" id="name">
+            <section class="mapa-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106198.81643194551!2d-104.62145550700877!3d33.37691157922754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e065b706c9861d%3A0xc3f54817a35368a!2sRoswell%2C%20Nuevo%20M%C3%A9xico%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+            </section>
 
-            <label for="cel">ID: </label>
-            <input type="text" id="name">
+            <form action="">
+                <label for="raza">Raza:</label>
+                <input type="text" id="raza">
 
-            <label for="email">e-Mail: </label>
-            <input type="email" name="email" id="email">
-            
-            <label for="comments">Amenazas a los humanos: </label>
-            <textarea name="comments" id="comments"></textarea>
-            
+                <label for="id-alien">ID:</label>
+                <input type="text" id="id-alien">
 
-            <div>
-                <input type="submit" value="Enviar">
-                <input type="checkbox" id="destroy humanity">
-                <label for="destroy humanity">Destruir a la Humanidad!!</label>
-            </div>
-        </form>
+                <label for="email">e-Mail:</label>
+                <input type="email" name="email" id="email">
+                
+                <label for="comments">Amenazas a los humanos:</label>
+                <textarea name="comments" id="comments"></textarea>
+                
+                <div>
+                    <input type="submit" value="Enviar">
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="destroy-humanity">
+                        <label for="destroy-humanity">Destruir a la Humanidad!!</label>
+                    </div>
+                </div>
+            </form>
 
-    
+        </div>
     </main>
 
     <footer>
