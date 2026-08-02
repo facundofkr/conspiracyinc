@@ -1,0 +1,10 @@
+/* ========================================= */
+/* 2. 🛠️ MIXINS Y EXTENDS                     */
+/* ========================================= */
+%sombra-oscura {
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+@mixin brillo-alienigena($color: $verde-brillo-alien, $difuminado: 15px) {
+    filter: drop-shadow(0px 0px $difuminado $color);
+}

@@ -192,14 +192,3 @@
     }
 }
 
-// Pequeña animación para que no aparezca de golpe
-@keyframes aparecer {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
