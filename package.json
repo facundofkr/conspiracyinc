@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/facundofkr/BurgerX/issues"
   },
-  "homepage": "https://github.com/facundofkr/BurgerX#readme"
+  "homepage": "https://github.com/facundofkr/BurgerX#readme",
+  "dependencies": {
+    "sass": "^1.102.0"
+  }
 }

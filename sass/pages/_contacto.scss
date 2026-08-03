@@ -1,7 +1,7 @@
 /* ========================================= */
 /* 🛸 ESTILOS DE PÁGINA: CONTACTO              */
 /* ========================================= */
-
+@use '../utilities/variables' as v;
 // Contenedor principal que pone el mapa a la izquierda y el form a la derecha
 .contacto-container {
     display: flex;

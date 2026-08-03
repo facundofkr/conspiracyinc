@@ -1,6 +1,9 @@
 /* ========================================= */
 /* ⚙️ RESET Y CONFIGURACIÓN BASE             */
 /* ========================================= */
+@use 'variables' as v;
+@use 'mixins' as m;
+
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +12,9 @@
 
 body {
     min-height: 100vh;
-    background-color: $color-fondo-body;
+    background-color: v.$color-fondo-body;
     text-align: center;
     font-weight: bold;
-    @extend %sombra-oscura;
+    @include m.sombra-oscura;
     font-size: 20px;
 }

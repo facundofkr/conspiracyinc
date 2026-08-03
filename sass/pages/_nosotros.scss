@@ -1,7 +1,7 @@
 /* ========================================= */
 /* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
 /* ========================================= */
-
+@use '../utilities/variables' as v;
 // Contenedor de tu foto de perfil
 .yo {
     display: inline-block; // Asegura que la sombra rodee exactamente a la imagen

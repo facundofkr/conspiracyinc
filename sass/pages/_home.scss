@@ -1,0 +1,25 @@
+@import "../utilities/variables";
+@import "../utilities/mixins";
+@use '../utilities/variables' as v;
+
+
+.home {
+    background-image: url(../assets/imgs/space.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.imagenprincipal {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    border-radius: 20px;
+    filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
+    transition: 0.2s ease;
+    margin: 15px 0;
+    
+    &:hover {
+        transform: scale(1.01); // Si querés sumarle el efecto hover que tienen las otras
+    }

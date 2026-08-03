@@ -1,35 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
 
 /* ========================================= */
-/* 1. 🛠️ UTILITIES (LAS HERRAMIENTAS PRIMERO) */
+/* 1. 🛠️ UTILITIES                           */
 /* ========================================= */
-@import '../sass/utilities/variables';
-@import '../sass/utilities/mixins';
-@import '../sass/utilities/reset';
-@import '../sass/utilities/animations';
+@use '../sass/utilities/variables' as v;
+@use '../sass/utilities/mixins' as m;
+@use '../sass/utilities/reset';
+@use '../sass/utilities/animations';
 
 /* ========================================= */
-/* 2. 📦 PAGES Y OTROS COMPONENTES           */
+/* 2. 📦 PAGES Y COMPONENTES                 */
 /* ========================================= */
-@import '../sass/pages/contacto';
-@import '../sass/pages/galeria';
-@import '../sass/pages/menu';
-@import '../sass/pages/nosotros';
-
-.home {
-    background-image: url(../assets/imgs/space.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    background-attachment: fixed; 
-}
+@use '../sass/components/header';
+@use '../sass/pages/home';
+@use '../sass/pages/contacto';
+@use '../sass/pages/galeria';
+@use '../sass/pages/menu';
+@use '../sass/pages/nosotros';
 
 /* ========================================= */
 /* 3. 📝 TIPOGRAFÍA Y TEXTOS                 */
 /* ========================================= */
 h1 {
     text-align: center;
-    color: $color-blanco;
+    color: v.$color-blanco;
     font-weight: bold;
     font-size: 50px;
     text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);   
@@ -41,9 +35,9 @@ h1 {
 }
 
 h2 {
-    font-family: $font-orbitron;  
+    font-family: v.$font-orbitron;  
     text-align: center;
-    color: $color-blanco;
+    color: v.$color-blanco;
     font-weight: bold;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     font-size: 40px; 
@@ -56,7 +50,7 @@ h2 {
 
 h3 { 
     font-size: 30px; 
-    color: $color-hueso;
+    color: v.$color-hueso;
     text-shadow: 6px 6px 8px rgb(0, 0, 0);
     margin-top: 40px;
     margin-bottom: 20px;
@@ -68,30 +62,29 @@ h3 {
 
 h4 { 
     font-size: 15px; 
-    color: $color-hueso;
+    color: v.$color-hueso;
     text-shadow: 6px 6px 8px rgb(0, 0, 0);
     margin-bottom: 40px;
 }
 
 p {
-    color: $color-texto-p;
-    @extend %sombra-oscura;
+    color: v.$color-texto-p;
+    @include m.sombra-oscura;
     margin-bottom: 30px;
 }
 
 a {
-    color: $color-hueso;
+    color: v.$color-hueso;
     text-decoration: none;
-    font-family: $font-black-ops;
+    font-family: v.$font-black-ops;
 }
 
-
 .titulo-principal {
-    font-family: $font-orbitron;
+    font-family: v.$font-orbitron;
     font-size: 50px;
     letter-spacing: 30px;
-    color: $color-blanco;
-    -webkit-text-stroke: 1px $verde-borde;
+    color: v.$color-blanco;
+    -webkit-text-stroke: 1px v.$verde-borde;
     filter: drop-shadow(10px 10px 20px rgb(5, 143, 5)); 
 
     @media (max-width: 768px) {
@@ -107,13 +100,12 @@ header, main, footer {
     padding: 25px 10px;
 }
 
-/* --- MENÚ PRINCIPAL (HEADER Y DEBAJO DE LA IMAGEN) --- */
 header nav ul, 
 .nav-principal ul {
-    font-family: $font-chelsea;   
+    font-family: v.$font-chelsea;   
     font-size: 40px; 
     font-weight: bold;
-    color: $color-hueso;
+    color: v.$color-hueso;
     text-align: center;           
     list-style-position: inside;  
     list-style-type: none; 
@@ -184,43 +176,13 @@ footer {
     }
 }
 
-.menu-lista {
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-}
-
-.menuseleccion {
-    font-family: $font-chelsea; 
-    font-size: 30px;
-    font-weight: bold;
-    color: $color-hueso;
-    text-align: center;           
-    list-style-position: inside;  
-    list-style-type: none;
-    justify-content: center;                                   
-    transition: 0.2s ease; 
-
-    &:hover {
-        filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
-    }
-}
-
-main ol li {
-    list-style-type: none;
-    margin-bottom: 25px;   
-    font-size: 24px;       
-}
-
 /* ========================================= */
-/* 5. 🖼️ COMPONENTES Y MULTIMEDIA             */
+/* 5. 🖼️ COMPONENTES Y MULTIMEDIA            */
 /* ========================================= */
 .botones {
-    font-family: $font-chelsea;
-    background-color: $verde-boton;
-    color: $color-hueso;
+    font-family: v.$font-chelsea;
+    background-color: v.$verde-boton;
+    color: v.$color-hueso;
     font-size: 14px; 
     font-weight: 600; 
     letter-spacing: 1.5px; 
@@ -232,23 +194,7 @@ main ol li {
     text-decoration: none;
 
     &:hover {
-        background-color: $verde-boton-hover; 
-    }
-}
-
-.botonesnosotros {
-    margin: 30px 0; 
-}
-
-.logo-principal {
-    height: 10vh; 
-    width: auto;
-    filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
-    margin-bottom: 0.5px;
-    transition: 0.2s ease; 
-
-    &:hover {
-        filter: drop-shadow(15px 15px 30px rgb(73, 255, 2)); 
+        background-color: v.$verde-boton-hover; 
     }
 }
 
@@ -256,78 +202,4 @@ main ol li {
     height: 5vh;
     width: auto;
     transition: 0.3s ease;
-}
-
-.imagenprincipal {
-    max-width: 100%;
-    height: auto;
-    max-height: 50vh; 
-    border-radius: 20px;
-    filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
-    transition: 0.2s ease;
-    margin: 15px 0;
-}
-
-.yo {
-    border-radius: 10px; 
-    filter: drop-shadow(10px 10px 20px rgb(10, 10, 10)); 
-    transition: 0.2s ease; 
-    margin-top: 20px;    
-    margin-bottom: 40px;
-    box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6); 
-
-    @media (max-width: 768px) {
-        width: 90%;
-        height: auto;
-        max-width: 400px;
-    }
-}
-
-.contenedor-galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; 
-    padding: 40px; 
-    max-width: 1400px; 
-    margin: 0 auto; 
-
-    iframe {
-        width: 100%; 
-        aspect-ratio: 16 / 9; 
-        border-radius: 15px; 
-        border: none; 
-        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); 
-        transition: 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05); 
-            @include brillo-alienigena(); 
-        }
-    }
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-}
-
-.carousel-inner iframe {
-    aspect-ratio: 16 / 9;
-    border-radius: 15px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8);
-}
-
-#videoCarousel {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-form label {
-    color: $color-blanco;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    color: $color-blanco;
 }
