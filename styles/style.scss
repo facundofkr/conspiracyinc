@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
-
 /* ========================================= */
 /* 1. 🛠️ UTILITIES                           */
 /* ========================================= */
@@ -12,11 +10,17 @@
 /* 2. 📦 PAGES Y COMPONENTES                 */
 /* ========================================= */
 @use '../sass/components/header';
+@use '../sass/components/footer';
 @use '../sass/pages/home';
 @use '../sass/pages/contacto';
 @use '../sass/pages/galeria';
 @use '../sass/pages/menu';
 @use '../sass/pages/nosotros';
+
+/* ========================================= */
+/* 🌐 TIPOGRAFÍAS EXTERNAS                   */
+/* ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
 
 /* ========================================= */
 /* 3. 📝 TIPOGRAFÍA Y TEXTOS                 */

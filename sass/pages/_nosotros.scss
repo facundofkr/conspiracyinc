@@ -2,35 +2,33 @@
 /* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
 /* ========================================= */
 @use '../utilities/variables' as v;
-// Contenedor de tu foto de perfil
+
 .yo {
-    display: inline-block; // Asegura que la sombra rodee exactamente a la imagen
+    display: inline-block; 
     border-radius: 10px; 
     filter: drop-shadow(10px 10px 20px rgb(10, 10, 10)); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     margin: 20px auto 40px auto;
     box-shadow: 0px 0px 20px rgba(1, 170, 29, 0.6); 
-    overflow: hidden; // Si la foto se agranda en el hover, no se sale de los bordes
+    overflow: hidden; 
 
     img {
         display: block; 
-        height: 50vh; // Pasamos el estilo en línea hacia el SCSS
+        height: 50vh; 
         width: auto;
         border-radius: 10px;
-        transition: transform 0.4s ease; // Transición suave para la foto
+        transition: transform 0.4s ease; 
     }
 
-    // Efecto cuando el usuario pasa el mouse por tu foto
     &:hover {
-        box-shadow: 0px 0px 30px $verde-brillo-alien;
-        transform: translateY(-5px); // Levanta la foto un poquito
+        box-shadow: 0px 0px 30px v.$verde-brillo-alien;
+        transform: translateY(-5px); 
 
         img {
-            transform: scale(1.03); // Efecto de zoom sutil hacia tu foto
+            transform: scale(1.03); 
         }
     }
 
-    // Adaptación para celulares
     @media (max-width: 768px) {
         width: 90% !important;
         height: auto !important;
@@ -43,8 +41,6 @@
     }
 }
 
-// Separación extra específica para la navegación en la página de Nosotros
-// (Reemplaza los margin que tenías inline en el HTML)
 header nav.nav-nosotros {
     margin-top: 40px;
     margin-bottom: 50px;

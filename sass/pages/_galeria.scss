@@ -2,13 +2,13 @@
 /* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
 /* ========================================= */
 @use '../utilities/variables' as v;
+
 main.container {
-    // Estilos específicos para el carrusel de videos
     #videoCarousel {
-        max-width: 800px; // Agrandamos el límite máximo para que se disfruten mejor los videos
+        max-width: 800px; 
         margin: 0 auto;
         padding: 20px;
-        background-color: rgba(33, 46, 33, 0.4); // Fondo difuminado estilo bunker
+        background-color: rgba(33, 46, 33, 0.4); 
         border-radius: 20px;
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(1, 170, 29, 0.2);
@@ -22,15 +22,14 @@ main.container {
 
                 &:hover {
                     transform: scale(1.01);
-                    filter: drop-shadow(0px 0px 15px $verde-brillo-alien);
+                    filter: drop-shadow(0px 0px 15px v.$verde-brillo-alien);
                 }
             }
         }
 
-        // Estilos para los botones de control (prev / next)
         .carousel-control-prev,
         .carousel-control-next {
-            width: 8%; // Ajustamos el ancho para que no tape los costados del video
+            width: 8%; 
             opacity: 0.7;
             transition: opacity 0.2s ease;
 
@@ -39,13 +38,12 @@ main.container {
             }
 
             span {
-                filter: drop-shadow(0px 0px 8px $verde-brillo-alien); // Brillo verde a las flechas
+                filter: drop-shadow(0px 0px 8px v.$verde-brillo-alien); 
             }
         }
     }
 }
 
-// Mantenemos la grilla de videos por si se usa en otros sectores de la galería
 .contenedor-galeria {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -64,7 +62,7 @@ main.container {
 
         &:hover {
             transform: scale(1.05); 
-            filter: drop-shadow(0px 0px 15px $verde-brillo-alien); 
+            filter: drop-shadow(0px 0px 15px v.$verde-brillo-alien); 
         }
     }
 
