@@ -437,14 +437,9 @@ a {
   font-family: "Black Ops One", system-ui;
 }
 
-.frase {
-  margin: 40px 0;
-  text-shadow: 6px 6px 10px rgb(0, 0, 0);
-}
-
 .titulo-principal {
   font-family: "Orbitron", system-ui;
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: 30px;
   color: #ffffff;
   -webkit-text-stroke: 1px #034b01;
