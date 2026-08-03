@@ -149,7 +149,7 @@ body {
   cursor: pointer;
   accent-color: #ff4d4d;
 }
-.contacto-container form div .checkbox-container label[for="destroy humanity"] {
+.contacto-container form div .checkbox-container label[for=destroy-humanity] {
   font-size: 16px;
   color: #ff4d4d;
   font-family: "Orbitron", system-ui;
