@@ -1,14 +1,9 @@
-/* ========================================= */
-/* 1. 🛠️ UTILITIES                         */
-/* ========================================= */
 @use '../sass/utilities/variables' as v;
 @use '../sass/utilities/mixins' as m;
 @use '../sass/utilities/reset';
 @use '../sass/utilities/animations';
 
-/* ========================================= */
-/* 2. 📦 PAGES Y COMPONENTES                 */
-/* ========================================= */
+
 @use '../sass/components/header';
 @use '../sass/components/footer';
 @use '../sass/pages/home';
@@ -17,14 +12,10 @@
 @use '../sass/pages/menu';
 @use '../sass/pages/nosotros';
 
-/* ========================================= */
-/* 🌐 TIPOGRAFÍAS EXTERNAS                   */
-/* ========================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
 
-/* ========================================= */
-/* 3. 📝 TIPOGRAFÍA Y TEXTOS                 */
-/* ========================================= */
+
 h1 {
     text-align: center;
     color: v.$color-blanco;
@@ -53,7 +44,7 @@ h2 {
 }
 
 h3 { 
-    font-size: 30px; 
+    font-size: 20px; 
     color: v.$color-hueso;
     text-shadow: 6px 6px 8px rgb(0, 0, 0);
     margin-top: 40px;
@@ -65,7 +56,7 @@ h3 {
 }
 
 h4 { 
-    font-size: 15px; 
+    font-size: 8px; 
     color: v.$color-hueso;
     text-shadow: 6px 6px 8px rgb(0, 0, 0);
     margin-bottom: 40px;
@@ -83,23 +74,7 @@ a {
     font-family: v.$font-black-ops;
 }
 
-.titulo-principal {
-    font-family: v.$font-orbitron;
-    font-size: 50px;
-    letter-spacing: 30px;
-    color: v.$color-blanco;
-    -webkit-text-stroke: 1px v.$verde-borde;
-    filter: drop-shadow(10px 10px 20px rgb(5, 143, 5)); 
 
-    @media (max-width: 768px) {
-        font-size: 32px;
-        letter-spacing: 3px;
-    }
-}
-
-/* ========================================= */
-/* 4. 🏗️ ESTRUCTURA Y NAVEGACIÓN             */
-/* ========================================= */
 header, main, footer {
     padding: 25px 10px;
 }
@@ -143,9 +118,7 @@ header nav ul,
     }
 }
 
-/* ========================================= */
-/* 5. 🖼️ COMPONENTES Y MULTIMEDIA            */
-/* ========================================= */
+
 .botones {
     font-family: v.$font-chelsea;
     background-color: v.$verde-boton;

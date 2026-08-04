@@ -1,42 +1,23 @@
-/* ========================================= */
-/* 🔻 NAV REDES UNIFICADO (Sirve para todo)  */
-/* ========================================= */
+
 @use '../utilities/variables' as v;
 
-body.home .nav-redes,
-.nav-redes {
-    position: fixed;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    transition: 0.2s ease;
+    h3 { 
+        font-size: 20px; 
+        color: v.$color-hueso;
+        text-shadow: 6px 6px 8px rgb(0, 0, 0);
+        margin-top: 30px;
+        margin-bottom: 20px;
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        font-size: 16px;
-
-        li {
-            transition: 0.3s ease;
-            filter: none;
-
-            &:hover {
-                filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
-            }
+        @media (max-width: 768px) {
+            font-size: 22px;
         }
     }
-}
 
-.icono-redes {
-    height: 5vh;
-    width: auto;
-    transition: 0.3s ease;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+    h4 { 
+        font-size: 10px; 
+        color: v.$color-hueso;
+        text-shadow: 6px 6px 8px rgb(0, 0, 0);
+        margin-bottom: 30px;
+    }
+
 

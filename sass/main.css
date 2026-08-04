@@ -6,21 +6,6 @@
 /* 🌐 TIPOGRAFÍAS EXTERNAS                   */
 /* ========================================= */
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
-/* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
-/* ========================================= */
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
-/* ========================================= */
-/* 2. 🛠️ MIXINS Y EXTENDS                    */
-/* ========================================= */
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
-/* ========================================= */
-/* ⚙️ RESET Y CONFIGURACIÓN BASE             */
-/* ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -36,9 +21,6 @@ body {
   font-size: 20px;
 }
 
-/* ========================================= */
-/* 🎬 ANIMACIONES GLOBALES                   */
-/* ========================================= */
 @keyframes aparecer {
   from {
     transform: scale(0.8);
@@ -57,60 +39,53 @@ body {
   width: auto;
   filter: drop-shadow(6px 6px 8px rgba(208, 218, 208, 0.795)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
   margin-bottom: 10px;
+  margin-top: 20px;
   transition: 0.2s ease;
 }
 .logo-principal:hover {
   filter: drop-shadow(15px 15px 30px rgb(73, 255, 2));
 }
 
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
-/* ========================================= */
-/* 🔻 NAV REDES UNIFICADO (Sirve para todo)  */
-/* ========================================= */
-body.home .nav-redes,
-.nav-redes {
-  position: fixed;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  transition: 0.2s ease;
+.titulo-principal {
+  font-family: "Orbitron", system-ui;
+  font-size: 50px;
+  letter-spacing: 30px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #034b01;
+  margin-bottom: 10px;
+  filter: drop-shadow(10px 10px 20px rgb(5, 143, 5));
+  will-change: filter, -webkit-text-stroke;
+  transform: translateZ(0);
 }
-body.home .nav-redes ul,
-.nav-redes ul {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  font-size: 16px;
-}
-body.home .nav-redes ul li,
-.nav-redes ul li {
-  transition: 0.3s ease;
-  filter: none;
-}
-body.home .nav-redes ul li:hover,
-.nav-redes ul li:hover {
-  filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
 }
 
-.icono-redes {
-  height: 5vh;
-  width: auto;
-  transition: 0.3s ease;
-  padding-top: 30px;
-  padding-bottom: 30px;
+h3 {
+  font-size: 20px;
+  color: antiquewhite;
+  text-shadow: 6px 6px 8px rgb(0, 0, 0);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+
+h4 {
+  font-size: 10px;
+  color: antiquewhite;
+  text-shadow: 6px 6px 8px rgb(0, 0, 0);
+  margin-bottom: 30px;
 }
 
 /* ========================================= */
 /* 3. 📄 PÁGINAS                             */
-/* ========================================= */
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
 /* 🚀 ESTILOS DE PÁGINA: HOME                */
@@ -126,11 +101,12 @@ body.home .nav-redes ul li:hover,
 .imagenprincipal {
   max-width: 100%;
   height: auto;
-  max-height: 50vh;
+  max-height: 30vh;
   border-radius: 20px;
   filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
   transition: 0.2s ease;
   margin: 15px 0;
+  margin-bottom: 40px;
 }
 .imagenprincipal:hover {
   transform: scale(1.01);
@@ -148,7 +124,7 @@ body.home .nav-redes ul li:hover,
 .nav-redes ul {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Bajamos un poco el gap excesivo */
+  gap: 20px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -158,18 +134,14 @@ body.home .nav-redes ul li:hover,
   width: 100%;
   display: flex;
   justify-content: center;
-  /* 👇 FORZAMOS A LAS IMÁGENES A TENER ANCHO Y QUITAR EL PADDING ACUMULADO */
 }
 .nav-redes ul li img.icono-redes {
-  width: 45px; /* Ancho fijo real */
-  height: 45px; /* Alto fijo real */
-  padding: 0; /* Matamos el padding que las colapsaba */
+  width: 45px;
+  height: 45px;
+  padding: 0;
   display: block;
 }
 
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
 /* ========================================= */
 /* 🛸 ESTILOS DE PÁGINA: CONTACTO            */
 /* ========================================= */
@@ -292,9 +264,6 @@ body.home .nav-redes ul li:hover,
   }
 }
 
-/* ========================================= */
-/* 🛸 VENTANA EMERGENTE (MODAL)              */
-/* ========================================= */
 .modal-container {
   display: none;
   position: fixed;
@@ -342,9 +311,6 @@ body.home .nav-redes ul li:hover,
   filter: drop-shadow(0 0 10px rgba(1, 170, 29, 0.8));
 }
 
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
 /* ========================================= */
 /* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
 /* ========================================= */
@@ -410,9 +376,6 @@ main.container #videoCarousel .carousel-control-next span {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
-/* ========================================= */
 /* 📂 ESTILOS DE PÁGINA: CASOS (MENU)        */
 /* ========================================= */
 main ol {
@@ -444,9 +407,6 @@ main ol li .menuseleccion:hover {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
-/* ========================================= */
 /* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
 /* ========================================= */
 .yo {
@@ -474,8 +434,8 @@ main ol li .menuseleccion:hover {
 }
 @media (max-width: 768px) {
   .yo {
-    width: 90% !important;
-    height: auto !important;
+    width: 90%;
+    height: auto;
     max-width: 400px;
   }
   .yo img {

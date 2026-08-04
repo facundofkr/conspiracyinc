@@ -15,11 +15,12 @@
 .imagenprincipal {
     max-width: 100%;
     height: auto;
-    max-height: 50vh;
+    max-height: 30vh;
     border-radius: 20px;
     filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
     transition: 0.2s ease;
     margin: 15px 0;
+    margin-bottom: 40px;
     
     &:hover {
         transform: scale(1.01);
@@ -38,7 +39,7 @@
     ul {
         display: flex;
         flex-direction: column;
-        gap: 20px; /* Bajamos un poco el gap excesivo */
+        gap: 20px; 
         padding: 0;
         margin: 0;
         list-style-type: none;
@@ -49,11 +50,10 @@
             display: flex;
             justify-content: center;
             
-            /* 👇 FORZAMOS A LAS IMÁGENES A TENER ANCHO Y QUITAR EL PADDING ACUMULADO */
             img.icono-redes {
-                width: 45px;  /* Ancho fijo real */
-                height: 45px; /* Alto fijo real */
-                padding: 0;   /* Matamos el padding que las colapsaba */
+                width: 45px;  
+                height: 45px; 
+                padding: 0;   
                 display: block;
             }
         }
