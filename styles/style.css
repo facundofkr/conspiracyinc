@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* 🌐 TIPOGRAFÍAS EXTERNAS                   */
@@ -10,13 +10,13 @@
 /* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
 /* ========================================= */
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* 2. 🛠️ MIXINS Y EXTENDS                    */
 /* ========================================= */
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* ⚙️ RESET Y CONFIGURACIÓN BASE             */
@@ -64,44 +64,38 @@ body {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
-/* 🔻 COMPONENTE: FOOTER                     */
+/* 🔻 NAV REDES UNIFICADO (Sirve para todo)  */
 /* ========================================= */
-footer {
-  padding-top: 30px;
-}
-footer nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  padding: 0;
-  list-style-type: none;
+body.home .nav-redes,
+.nav-redes {
   position: fixed;
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
   transition: 0.2s ease;
+}
+body.home .nav-redes ul,
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   font-size: 16px;
 }
-footer nav ul li {
+body.home .nav-redes ul li,
+.nav-redes ul li {
   transition: 0.3s ease;
   filter: none;
 }
-footer nav ul li:hover {
+body.home .nav-redes ul li:hover,
+.nav-redes ul li:hover {
   filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
-}
-@media (max-width: 768px) {
-  footer nav ul {
-    position: static;
-    flex-direction: row;
-    transform: none;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 20px;
-  }
 }
 
 .icono-redes {
@@ -113,7 +107,7 @@ footer nav ul li:hover {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* 🚀 ESTILOS DE PÁGINA: HOME                */
@@ -139,8 +133,39 @@ footer nav ul li:hover {
   transform: scale(1.01);
 }
 
+.nav-redes {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.2s ease;
+  width: 60px;
+}
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Bajamos un poco el gap excesivo */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+}
+.nav-redes ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* 👇 FORZAMOS A LAS IMÁGENES A TENER ANCHO Y QUITAR EL PADDING ACUMULADO */
+}
+.nav-redes ul li img.icono-redes {
+  width: 45px; /* Ancho fijo real */
+  height: 45px; /* Alto fijo real */
+  padding: 0; /* Matamos el padding que las colapsaba */
+  display: block;
+}
+
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* 🛸 ESTILOS DE PÁGINA: CONTACTO            */
@@ -315,7 +340,7 @@ footer nav ul li:hover {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
@@ -382,7 +407,7 @@ main.container #videoCarousel .carousel-control-next span {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* 📂 ESTILOS DE PÁGINA: CASOS (MENU)        */
@@ -416,7 +441,7 @@ main ol li .menuseleccion:hover {
 }
 
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 /* ========================================= */
 /* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
@@ -609,8 +634,40 @@ header nav ul li:hover,
   background-color: rgb(1, 68, 21);
 }
 
-.icono-redes {
-  height: 5vh;
-  width: auto;
+.nav-redes {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.2s ease;
+}
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+.nav-redes ul li {
   transition: 0.3s ease;
+  filter: none;
+}
+.nav-redes ul li:hover {
+  filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+}
+@media (max-width: 768px) {
+  .nav-redes {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .nav-redes ul {
+    flex-direction: row;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

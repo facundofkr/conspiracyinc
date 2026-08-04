@@ -1,5 +1,5 @@
 /* ========================================= */
-/* 1. 🛠️ UTILITIES                           */
+/* 1. 🛠️ UTILITIES                         */
 /* ========================================= */
 @use '../sass/utilities/variables' as v;
 @use '../sass/utilities/mixins' as m;
@@ -110,13 +110,13 @@ header nav ul,
     font-size: 40px; 
     font-weight: bold;
     color: v.$color-hueso;
-    text-align: center;           
+    text-align: center;             
     list-style-position: inside;  
     list-style-type: none; 
-    display: flex;                
-    justify-content: center;      
+    display: flex;                  
+    justify-content: center;        
     gap: 80px; 
-    padding: 0;                    
+    padding: 0;                     
     transition: 0.2s ease; 
     filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
 
@@ -143,8 +143,6 @@ header nav ul,
     }
 }
 
-
-
 /* ========================================= */
 /* 5. 🖼️ COMPONENTES Y MULTIMEDIA            */
 /* ========================================= */
@@ -167,8 +165,44 @@ header nav ul,
     }
 }
 
-.icono-redes {
-    height: 5vh;
-    width: auto;
-    transition: 0.3s ease;
+
+.nav-redes {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    transition: 0.2s ease;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        font-size: 16px;
+
+        li {
+            transition: 0.3s ease;
+            filter: none;
+
+            &:hover {
+                filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        ul {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
 }

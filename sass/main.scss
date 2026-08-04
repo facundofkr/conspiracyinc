@@ -1,25 +1,27 @@
-// 1. UTILIDADES (Variables y Mixins primero para que el resto pueda usarlos)
-@import 'utilities/variables';
-@import 'utilities/mixins';
-@import 'utilities/reset';
+/* ========================================= */
+/* 1. 🛠️ UTILIDADES                           */
+/* ========================================= */
+@use 'utilities/variables';
+@use 'utilities/mixins';
+@use 'utilities/reset';
+@use 'utilities/animations';
 
-// 2. COMPONENTES (Elementos que se repiten)
-@import 'components/header';
-@import 'components/footer';
+/* ========================================= */
+/* 2. 📦 COMPONENTES                         */
+/* ========================================= */
+@use 'components/header';
+@use 'components/footer';
 
-// 3. PÁGINAS (Estilos específicos de cada sección)
-@import 'pages/contacto';
-@import 'pages/galeria';
-@import 'pages/menu';
-@import 'pages/nosotros';
+/* ========================================= */
+/* 3. 📄 PÁGINAS                             */
+/* ========================================= */
+@use 'pages/home';
+@use 'pages/contacto';
+@use 'pages/galeria';
+@use 'pages/menu';
+@use 'pages/nosotros';
 
-// Control estricto de tamaños (Reemplaza los estilos en línea eliminados)
-.logo-principal {
-    height: 10vh;
-    width: auto;
-}
-
-.icono-redes {
-    height: 5vh;
-    width: auto;
-}
+/* ========================================= */
+/* 🌐 TIPOGRAFÍAS EXTERNAS                   */
+/* ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');

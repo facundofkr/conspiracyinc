@@ -1,18 +1,25 @@
 @charset "UTF-8";
 /* ========================================= */
+/* 1. 🛠️ UTILIDADES                           */
+/* ========================================= */
+/* ========================================= */
+/* 🌐 TIPOGRAFÍAS EXTERNAS                   */
+/* ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
+/* ========================================= */
 /* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
 /* ========================================= */
 /* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
-/* ========================================= */
-/* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
+/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
 /* 2. 🛠️ MIXINS Y EXTENDS                    */
 /* ========================================= */
 /* ========================================= */
-/* 2. 🛠️ MIXINS Y EXTENDS                    */
+/* 1. 🛠️ UTILIDADES                           */
+/* ========================================= */
+/* ========================================= */
+/* ⚙️ RESET Y CONFIGURACIÓN BASE             */
 /* ========================================= */
 * {
   margin: 0;
@@ -29,6 +36,22 @@ body {
   font-size: 20px;
 }
 
+/* ========================================= */
+/* 🎬 ANIMACIONES GLOBALES                   */
+/* ========================================= */
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* ========================================= */
+/* 2. 📦 COMPONENTES                         */
+/* ========================================= */
 .logo-principal {
   height: 10vh;
   width: auto;
@@ -41,44 +64,38 @@ body {
 }
 
 /* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
+/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
-/* 🔻 COMPONENTE: FOOTER                     */
+/* 🔻 NAV REDES UNIFICADO (Sirve para todo)  */
 /* ========================================= */
-footer {
-  padding-top: 30px;
-}
-footer nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  padding: 0;
-  list-style-type: none;
+body.home .nav-redes,
+.nav-redes {
   position: fixed;
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
   transition: 0.2s ease;
+}
+body.home .nav-redes ul,
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   font-size: 16px;
 }
-footer nav ul li {
+body.home .nav-redes ul li,
+.nav-redes ul li {
   transition: 0.3s ease;
   filter: none;
 }
-footer nav ul li:hover {
+body.home .nav-redes ul li:hover,
+.nav-redes ul li:hover {
   filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
-}
-@media (max-width: 768px) {
-  footer nav ul {
-    position: static;
-    flex-direction: row;
-    transform: none;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 20px;
-  }
 }
 
 .icono-redes {
@@ -90,7 +107,68 @@ footer nav ul li:hover {
 }
 
 /* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
+/* 3. 📄 PÁGINAS                             */
+/* ========================================= */
+/* ========================================= */
+/* 1. 🛠️ UTILIDADES                           */
+/* ========================================= */
+/* ========================================= */
+/* 🚀 ESTILOS DE PÁGINA: HOME                */
+/* ========================================= */
+.home {
+  background-image: url(../assets/imgs/space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.imagenprincipal {
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh;
+  border-radius: 20px;
+  filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
+  transition: 0.2s ease;
+  margin: 15px 0;
+}
+.imagenprincipal:hover {
+  transform: scale(1.01);
+}
+
+.nav-redes {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.2s ease;
+  width: 60px;
+}
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Bajamos un poco el gap excesivo */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+}
+.nav-redes ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* 👇 FORZAMOS A LAS IMÁGENES A TENER ANCHO Y QUITAR EL PADDING ACUMULADO */
+}
+.nav-redes ul li img.icono-redes {
+  width: 45px; /* Ancho fijo real */
+  height: 45px; /* Alto fijo real */
+  padding: 0; /* Matamos el padding que las colapsaba */
+  display: block;
+}
+
+/* ========================================= */
+/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
 /* 🛸 ESTILOS DE PÁGINA: CONTACTO            */
@@ -265,7 +343,7 @@ footer nav ul li:hover {
 }
 
 /* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
+/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
 /* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
@@ -332,7 +410,7 @@ main.container #videoCarousel .carousel-control-next span {
 }
 
 /* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
+/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
 /* 📂 ESTILOS DE PÁGINA: CASOS (MENU)        */
@@ -366,7 +444,7 @@ main ol li .menuseleccion:hover {
 }
 
 /* ========================================= */
-/* 1. 🎨 VARIABLES GLOBALES (PRIMERO SIEMPRE)  */
+/* 1. 🛠️ UTILIDADES                           */
 /* ========================================= */
 /* ========================================= */
 /* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
@@ -409,14 +487,4 @@ main ol li .menuseleccion:hover {
 header nav.nav-nosotros {
   margin-top: 40px;
   margin-bottom: 50px;
-}
-
-.logo-principal {
-  height: 10vh;
-  width: auto;
-}
-
-.icono-redes {
-  height: 5vh;
-  width: auto;
 }/*# sourceMappingURL=main.css.map */

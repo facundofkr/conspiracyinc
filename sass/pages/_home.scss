@@ -9,6 +9,7 @@
     background-size: cover; 
     background-position: center;
     background-attachment: fixed; 
+    
 }
 
 .imagenprincipal {
@@ -24,3 +25,40 @@
         transform: scale(1.01);
     }
 }
+
+.nav-redes {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    transition: 0.2s ease;
+    width: 60px; 
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Bajamos un poco el gap excesivo */
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        width: 100%;
+        
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            /* 👇 FORZAMOS A LAS IMÁGENES A TENER ANCHO Y QUITAR EL PADDING ACUMULADO */
+            img.icono-redes {
+                width: 45px;  /* Ancho fijo real */
+                height: 45px; /* Alto fijo real */
+                padding: 0;   /* Matamos el padding que las colapsaba */
+                display: block;
+            }
+        }
+    }
+}
+
+
+
