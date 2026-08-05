@@ -142,9 +142,6 @@ h4 {
   display: block;
 }
 
-/* ========================================= */
-/* 🛸 ESTILOS DE PÁGINA: CONTACTO            */
-/* ========================================= */
 .contacto-container {
   display: flex;
   flex-direction: row;
@@ -314,6 +311,20 @@ h4 {
 /* ========================================= */
 /* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
 /* ========================================= */
+main.container {
+  /* 🛠️ Espaciado superior e inferior para todo el contenedor de la galería */
+  padding-top: 20px;
+  padding-bottom: 40px;
+  /* 🛠️ Si tenés el texto (h2) o logo sueltos dentro del main, los acomodás así: */
+}
+main.container h2 {
+  margin-top: 50px;
+  margin-bottom: 70px; /* Separa el título del carrusel */
+}
+main.container .logo-galeria {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
 main.container #videoCarousel {
   max-width: 800px;
   margin: 0 auto;
@@ -322,6 +333,9 @@ main.container #videoCarousel {
   border-radius: 20px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(1, 170, 29, 0.2);
+  /* 🛠️ Separación inferior del carrusel respecto a lo que venga abajo (botones o grilla) */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 main.container #videoCarousel .carousel-inner iframe {
   aspect-ratio: 16/9;
@@ -347,12 +361,22 @@ main.container #videoCarousel .carousel-control-prev span,
 main.container #videoCarousel .carousel-control-next span {
   filter: drop-shadow(0px 0px 8px rgba(1, 170, 29, 0.8));
 }
+main.container {
+  /* 🛠️ Si tenés una botonera de filtros o navegación interna antes/después del carrusel */
+}
+main.container .contenedor-botones {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
 .contenedor-galeria {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  padding: 40px;
+  padding: 40px 0; /* 🛠️ Ajustamos padding: 40px arriba/abajo, 0 a los costados */
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -370,9 +394,17 @@ main.container #videoCarousel .carousel-control-next span {
 }
 @media (max-width: 768px) {
   .contenedor-galeria {
-    grid-template-columns: 1fr !important;
-    padding: 10px !important;
+    grid-template-columns: 1fr;
+    padding: 20px 10px; /* 🛠️ Más aire vertical en celulares */
   }
+}
+
+.nav-principal {
+  /* 🛠️ Modificá estos valores para dar el espacio exacto que quieras */
+  margin-top: 15px; /* Espacio entre el carrusel (o el contenido de arriba) y los botones */
+  margin-bottom: 1px; /* Espacio entre los botones y el footer (o el final de la página) */
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 /* ========================================= */
