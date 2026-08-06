@@ -1,0 +1,21 @@
+/* Dentro de sass/components/_botones.scss */
+@use '../utilities/variables' as v;
+
+.botones {
+    font-family: v.$font-chelsea;
+    background-color: v.$verde-boton;
+    color: v.$color-hueso;
+    font-size: 14px; 
+    font-weight: 600; 
+    letter-spacing: 1.5px; 
+    border: 1px solid rgba(255, 255, 255, 0.192);
+    padding: 12px 24px; 
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+        background-color: v.$verde-boton-hover; 
+    }
+}

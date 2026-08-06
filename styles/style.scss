@@ -1,181 +1,22 @@
+/* ========================================= */
+/* 🖖 ÍNDICE PRINCIPAL: CONSPIRACY INC.      */
+/* ========================================= */
+
+/* 1. UTILITIES (Variables, Mixins, Reset, Tipografía) */
 @use '../sass/utilities/variables' as v;
 @use '../sass/utilities/mixins' as m;
 @use '../sass/utilities/reset';
+@use '../sass/utilities/typography'; /* 👈 El nuevo archivo que creaste */
 @use '../sass/utilities/animations';
 
-
+/* 2. COMPONENTS (Bloques reutilizables) */
 @use '../sass/components/header';
 @use '../sass/components/footer';
+@use '../sass/components/botones';   /* 👈 El nuevo archivo que creaste */
+
+/* 3. PAGES (Estilos específicos de cada vista) */
 @use '../sass/pages/home';
 @use '../sass/pages/contacto';
 @use '../sass/pages/galeria';
 @use '../sass/pages/menu';
 @use '../sass/pages/nosotros';
-
-
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
-
-
-h1 {
-    text-align: center;
-    color: v.$color-blanco;
-    font-weight: bold;
-    font-size: 50px;
-    text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);   
-    margin-bottom: 30px;  
-
-    @media (max-width: 768px) {
-        font-size: 30px;
-    }
-}
-
-h2 {
-    font-family: v.$font-orbitron;  
-    text-align: center;
-    color: v.$color-blanco;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-    font-size: 40px; 
-    margin: 30px 0;
-
-    @media (max-width: 768px) {
-        font-size: 28px;
-    }
-}
-
-h3 { 
-    font-size: 20px; 
-    color: v.$color-hueso;
-    text-shadow: 6px 6px 8px rgb(0, 0, 0);
-    margin-top: 40px;
-    margin-bottom: 20px;
-
-    @media (max-width: 768px) {
-        font-size: 22px;
-    }
-}
-
-h4 { 
-    font-size: 8px; 
-    color: v.$color-hueso;
-    text-shadow: 6px 6px 8px rgb(0, 0, 0);
-    margin-bottom: 40px;
-}
-
-p {
-    color: v.$color-texto-p;
-    @include m.sombra-oscura;
-    margin-bottom: 30px;
-}
-
-a {
-    color: v.$color-hueso;
-    text-decoration: none;
-    font-family: v.$font-black-ops;
-}
-
-
-header, main, footer {
-    padding: 25px 10px;
-}
-
-header nav ul, 
-.nav-principal ul {
-    font-family: v.$font-chelsea;   
-    font-size: 40px; 
-    font-weight: bold;
-    color: v.$color-hueso;
-    text-align: center;             
-    list-style-position: inside;  
-    list-style-type: none; 
-    display: flex;                  
-    justify-content: center;        
-    gap: 80px; 
-    padding: 0;                     
-    transition: 0.2s ease; 
-    filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
-
-    li {
-        margin: 0 20px; 
-        filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));    
-        transition: 0.2s ease;
-
-        &:hover {
-            filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); 
-            transition: 0.3s ease; 
-        }
-    }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 15px; 
-        align-items: center;
-        
-        li {
-            margin: 5px 0; 
-            width: auto;
-        }
-    }
-}
-
-
-.botones {
-    font-family: v.$font-chelsea;
-    background-color: v.$verde-boton;
-    color: v.$color-hueso;
-    font-size: 14px; 
-    font-weight: 600; 
-    letter-spacing: 1.5px; 
-    border: 1px solid rgba(255, 255, 255, 0.192);
-    padding: 12px 24px; 
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    text-decoration: none;
-
-    &:hover {
-        background-color: v.$verde-boton-hover; 
-    }
-}
-
-
-.nav-redes {
-    position: fixed;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    transition: 0.2s ease;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        font-size: 16px;
-
-        li {
-            transition: 0.3s ease;
-            filter: none;
-
-            &:hover {
-                filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        position: static;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-
-        ul {
-            flex-direction: row;
-            gap: 20px;
-        }
-    }
-}

@@ -31,3 +31,43 @@
         letter-spacing: 3px;
     }
 }
+
+
+header nav ul, 
+.nav-principal ul {
+    font-family: v.$font-chelsea;   
+    font-size: 40px; 
+    font-weight: bold;
+    color: v.$color-hueso;
+    text-align: center;             
+    list-style-position: inside;  
+    list-style-type: none; 
+    display: flex;                  
+    justify-content: center;        
+    gap: 80px; 
+    padding: 0;                     
+    transition: 0.2s ease; 
+    filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
+
+    li {
+        margin: 0 20px; 
+        filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));    
+        transition: 0.2s ease;
+
+        &:hover {
+            filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658)); 
+            transition: 0.3s ease; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px; 
+        align-items: center;
+        
+        li {
+            margin: 5px 0; 
+            width: auto;
+        }
+    }
+}

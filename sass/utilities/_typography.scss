@@ -1,0 +1,63 @@
+/* Dentro de sass/utilities/_typography.scss */
+@use 'variables' as v;
+@use 'mixins' as m;
+
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');
+
+h1 {
+    text-align: center;
+    color: v.$color-blanco;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);   
+    margin-bottom: 30px;  
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-family: v.$font-orbitron;  
+    text-align: center;
+    color: v.$color-blanco;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    font-size: 40px; 
+    margin: 30px 0;
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+
+h3 { 
+    font-size: 20px; 
+    color: v.$color-hueso;
+    text-shadow: 6px 6px 8px rgb(0, 0, 0);
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
+}
+
+h4 { 
+    font-size: 8px; 
+    color: v.$color-hueso;
+    text-shadow: 6px 6px 8px rgb(0, 0, 0);
+    margin-bottom: 40px;
+}
+
+p {
+    color: v.$color-texto-p;
+    @include m.sombra-oscura;
+    margin-bottom: 30px;
+}
+
+a {
+    color: v.$color-hueso;
+    text-decoration: none;
+    font-family: v.$font-black-ops;
+}

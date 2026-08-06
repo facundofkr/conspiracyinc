@@ -21,3 +21,44 @@
     }
 
 
+    .nav-redes {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    transition: 0.2s ease;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        font-size: 16px;
+
+        li {
+            transition: 0.3s ease;
+            filter: none;
+
+            &:hover {
+                filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        ul {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}
+

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/* ========================================= */
+/* 🖖 ÍNDICE PRINCIPAL: CONSPIRACY INC.      */
+/* ========================================= */
+/* 1. UTILITIES (Variables, Mixins, Reset, Tipografía) */
+/* Dentro de sass/utilities/_typography.scss */
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
 * {
   margin: 0;
@@ -15,6 +20,72 @@ body {
   font-size: 20px;
 }
 
+header, main, footer {
+  padding: 25px 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-family: "Orbitron", system-ui;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  margin: 30px 0;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  color: antiquewhite;
+  text-shadow: 6px 6px 8px rgb(0, 0, 0);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+
+h4 {
+  font-size: 8px;
+  color: antiquewhite;
+  text-shadow: 6px 6px 8px rgb(0, 0, 0);
+  margin-bottom: 40px;
+}
+
+p {
+  color: rgb(214, 219, 216);
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-family: "Black Ops One", system-ui;
+}
+
+/* 👈 El nuevo archivo que creaste */
 @keyframes aparecer {
   from {
     transform: scale(0.8);
@@ -25,6 +96,7 @@ body {
     opacity: 1;
   }
 }
+/* 2. COMPONENTS (Bloques reutilizables) */
 .logo-principal {
   height: 10vh;
   width: auto;
@@ -55,6 +127,47 @@ body {
   }
 }
 
+header nav ul,
+.nav-principal ul {
+  font-family: "Chelsea Market", system-ui;
+  font-size: 40px;
+  font-weight: bold;
+  color: antiquewhite;
+  text-align: center;
+  list-style-position: inside;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 0;
+  transition: 0.2s ease;
+  filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
+}
+header nav ul li,
+.nav-principal ul li {
+  margin: 0 20px;
+  filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));
+  transition: 0.2s ease;
+}
+header nav ul li:hover,
+.nav-principal ul li:hover {
+  filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  header nav ul,
+  .nav-principal ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  header nav ul li,
+  .nav-principal ul li {
+    margin: 5px 0;
+    width: auto;
+  }
+}
+
 h3 {
   font-size: 20px;
   color: antiquewhite;
@@ -75,6 +188,65 @@ h4 {
   margin-bottom: 30px;
 }
 
+.nav-redes {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.2s ease;
+}
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+.nav-redes ul li {
+  transition: 0.3s ease;
+  filter: none;
+}
+.nav-redes ul li:hover {
+  filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+}
+@media (max-width: 768px) {
+  .nav-redes {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .nav-redes ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/* Dentro de sass/components/_botones.scss */
+.botones {
+  font-family: "Chelsea Market", system-ui;
+  background-color: rgb(33, 46, 33);
+  color: antiquewhite;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+.botones:hover {
+  background-color: rgb(1, 68, 21);
+}
+
+/* 👈 El nuevo archivo que creaste */
+/* 3. PAGES (Estilos específicos de cada vista) */
 /* ========================================= */
 /* 🚀 ESTILOS DE PÁGINA: HOME                */
 /* ========================================= */
@@ -467,166 +639,4 @@ main ol li .menuseleccion:hover {
 header nav.nav-nosotros {
   margin-top: 40px;
   margin-bottom: 50px;
-}
-
-h1 {
-  text-align: center;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 50px;
-  text-shadow: 15px 15px 17px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px;
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 30px;
-  }
-}
-
-h2 {
-  font-family: "Orbitron", system-ui;
-  text-align: center;
-  color: #ffffff;
-  font-weight: bold;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-  font-size: 40px;
-  margin: 30px 0;
-}
-@media (max-width: 768px) {
-  h2 {
-    font-size: 28px;
-  }
-}
-
-h3 {
-  font-size: 20px;
-  color: antiquewhite;
-  text-shadow: 6px 6px 8px rgb(0, 0, 0);
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-@media (max-width: 768px) {
-  h3 {
-    font-size: 22px;
-  }
-}
-
-h4 {
-  font-size: 8px;
-  color: antiquewhite;
-  text-shadow: 6px 6px 8px rgb(0, 0, 0);
-  margin-bottom: 40px;
-}
-
-p {
-  color: rgb(214, 219, 216);
-  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px;
-}
-
-a {
-  color: antiquewhite;
-  text-decoration: none;
-  font-family: "Black Ops One", system-ui;
-}
-
-header, main, footer {
-  padding: 25px 10px;
-}
-
-header nav ul,
-.nav-principal ul {
-  font-family: "Chelsea Market", system-ui;
-  font-size: 40px;
-  font-weight: bold;
-  color: antiquewhite;
-  text-align: center;
-  list-style-position: inside;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  padding: 0;
-  transition: 0.2s ease;
-  filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
-}
-header nav ul li,
-.nav-principal ul li {
-  margin: 0 20px;
-  filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));
-  transition: 0.2s ease;
-}
-header nav ul li:hover,
-.nav-principal ul li:hover {
-  filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
-  transition: 0.3s ease;
-}
-@media (max-width: 768px) {
-  header nav ul,
-  .nav-principal ul {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-  header nav ul li,
-  .nav-principal ul li {
-    margin: 5px 0;
-    width: auto;
-  }
-}
-
-.botones {
-  font-family: "Chelsea Market", system-ui;
-  background-color: rgb(33, 46, 33);
-  color: antiquewhite;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  border: 1px solid rgba(255, 255, 255, 0.192);
-  padding: 12px 24px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
-}
-.botones:hover {
-  background-color: rgb(1, 68, 21);
-}
-
-.nav-redes {
-  position: fixed;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  transition: 0.2s ease;
-}
-.nav-redes ul {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  font-size: 16px;
-}
-.nav-redes ul li {
-  transition: 0.3s ease;
-  filter: none;
-}
-.nav-redes ul li:hover {
-  filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
-}
-@media (max-width: 768px) {
-  .nav-redes {
-    position: static;
-    transform: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .nav-redes ul {
-    flex-direction: row;
-    gap: 20px;
-  }
 }/*# sourceMappingURL=style.css.map */

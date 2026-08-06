@@ -21,6 +21,10 @@ body {
   font-size: 20px;
 }
 
+header, main, footer {
+  padding: 25px 10px;
+}
+
 @keyframes aparecer {
   from {
     transform: scale(0.8);
@@ -64,6 +68,47 @@ body {
   }
 }
 
+header nav ul,
+.nav-principal ul {
+  font-family: "Chelsea Market", system-ui;
+  font-size: 40px;
+  font-weight: bold;
+  color: antiquewhite;
+  text-align: center;
+  list-style-position: inside;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 0;
+  transition: 0.2s ease;
+  filter: drop-shadow(6px 6px 8px rgba(59, 59, 59, 0.911));
+}
+header nav ul li,
+.nav-principal ul li {
+  margin: 0 20px;
+  filter: drop-shadow(6px 6px 8px rgba(1, 170, 29, 0.589));
+  transition: 0.2s ease;
+}
+header nav ul li:hover,
+.nav-principal ul li:hover {
+  filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  header nav ul,
+  .nav-principal ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  header nav ul li,
+  .nav-principal ul li {
+    margin: 5px 0;
+    width: auto;
+  }
+}
+
 h3 {
   font-size: 20px;
   color: antiquewhite;
@@ -82,6 +127,44 @@ h4 {
   color: antiquewhite;
   text-shadow: 6px 6px 8px rgb(0, 0, 0);
   margin-bottom: 30px;
+}
+
+.nav-redes {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: 0.2s ease;
+}
+.nav-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+.nav-redes ul li {
+  transition: 0.3s ease;
+  filter: none;
+}
+.nav-redes ul li:hover {
+  filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
+}
+@media (max-width: 768px) {
+  .nav-redes {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .nav-redes ul {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 
 /* ========================================= */
