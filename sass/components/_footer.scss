@@ -49,16 +49,7 @@
     }
 
     @media (max-width: 768px) {
-        position: static;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-
-        ul {
-            flex-direction: row;
-            gap: 20px;
-        }
+        display: none;
     }
 }
 
