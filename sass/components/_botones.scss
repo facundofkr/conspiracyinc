@@ -1,21 +1,35 @@
-/* Dentro de sass/components/_botones.scss */
+/* ========================================= */
+/* 🖖 COMPONENTE: BOTONES (Con @extend)      */
+/* ========================================= */
 @use '../utilities/variables' as v;
 
-.botones {
+/* 1. Placeholder base que será extendido */
+%boton-base {
     font-family: v.$font-chelsea;
-    background-color: v.$verde-boton;
     color: v.$color-hueso;
-    font-size: 14px; 
-    font-weight: 600; 
-    letter-spacing: 1.5px; 
-    border: 1px solid rgba(255, 255, 255, 0.192);
-    padding: 12px 24px; 
+    font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
     text-decoration: none;
+    transition: background-color 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.192);
+}
+
+/* 2. Clase principal que aplica el @extend */
+.botones {
+    @extend %boton-base;
+    background-color: v.$verde-boton;
+    font-size: 14px; 
+    letter-spacing: 1.5px; 
+    padding: 12px 24px; 
 
     &:hover {
         background-color: v.$verde-boton-hover; 
+    }
+
+    /* 📱 Versión compacta para celulares */
+    @media (max-width: 768px) {
+        padding: 6px 14px; /* Botones más finitos y delicados */
+        font-size: 12px;   /* Letra más chica */
     }
 }

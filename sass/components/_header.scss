@@ -62,12 +62,9 @@ header nav ul,
 
     @media (max-width: 768px) {
         flex-direction: column;
-        gap: 15px; 
         align-items: center;
+        gap: 5px; 
         
         li {
-            margin: 5px 0; 
+            margin: 0; 
             width: auto;
-        }
-    }
-}
