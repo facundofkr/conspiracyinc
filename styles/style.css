@@ -97,6 +97,9 @@ a {
   }
 }
 /* 2. COMPONENTS (Bloques reutilizables) */
+/* ========================================= */
+/* 🖖 COMPONENTE: HEADER                     */
+/* ========================================= */
 .logo-principal {
   height: 10vh;
   width: auto;
@@ -127,6 +130,7 @@ a {
   }
 }
 
+/* 📌 BARRA DE NAVEGACIÓN */
 header nav ul,
 .nav-principal ul {
   font-family: "Chelsea Market", system-ui;
@@ -154,38 +158,39 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
+header nav ul,
+.nav-principal ul {
+  /* 📱 Versión responsiva (Perfectamente anidada aquí adentro) */
+}
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 6px;
     align-items: center;
   }
   header nav ul li,
   .nav-principal ul li {
-    margin: 5px 0;
+    margin: 0;
     width: auto;
   }
 }
 
-h3 {
-  font-size: 20px;
-  color: antiquewhite;
-  text-shadow: 6px 6px 8px rgb(0, 0, 0);
-  margin-top: 30px;
-  margin-bottom: 20px;
+/* ========================================= */
+/* 🖖 COMPONENTE: FOOTER                     */
+/* ========================================= */
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  /* 👇 Estilo delicado para el copyright en celulares y escritorio */
 }
-@media (max-width: 768px) {
-  h3 {
-    font-size: 22px;
-  }
-}
-
-h4 {
-  font-size: 10px;
-  color: antiquewhite;
-  text-shadow: 6px 6px 8px rgb(0, 0, 0);
-  margin-bottom: 30px;
+footer p, footer small, footer .creador {
+  font-size: 10px; /* 👈 Letra bien pequeña y sutil */
+  color: rgb(214, 219, 216);
+  font-family: "Black Ops One", system-ui;
+  opacity: 0.7; /* 👈 Un toque transparente para que no moleste */
+  margin-top: 10px;
+  letter-spacing: 1px;
 }
 
 .nav-redes {
@@ -218,23 +223,39 @@ h4 {
   }
 }
 
-/* Dentro de sass/components/_botones.scss */
+/* ========================================= */
+/* 🖖 COMPONENTE: BOTONES (Con @extend)      */
+/* ========================================= */
+/* 1. Placeholder base que será extendido */
 .botones {
   font-family: "Chelsea Market", system-ui;
-  background-color: rgb(33, 46, 33);
   color: antiquewhite;
-  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1.5px;
-  border: 1px solid rgba(255, 255, 255, 0.192);
-  padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
   text-decoration: none;
+  transition: background-color 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.192);
+}
+
+/* 2. Clase principal que aplica el @extend */
+.botones {
+  background-color: rgb(33, 46, 33);
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  padding: 12px 24px;
 }
 .botones:hover {
   background-color: rgb(1, 68, 21);
+}
+.botones {
+  /* 📱 Versión compacta para celulares */
+}
+@media (max-width: 768px) {
+  .botones {
+    padding: 6px 14px; /* Botones más finitos y delicados */
+    font-size: 12px; /* Letra más chica */
+  }
 }
 
 /* 👈 El nuevo archivo que creaste */
