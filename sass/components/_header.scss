@@ -61,10 +61,15 @@ header nav ul,
     }
 
     @media (max-width: 768px) {
+    header nav ul, 
+    .nav-principal ul {
         flex-direction: column;
+        gap: 6px; /* 👈 Espacio súper reducido entre botón y botón */
         align-items: center;
-        gap: 5px; 
         
         li {
-            margin: 0; 
+            margin: 0;
             width: auto;
+        }
+    }
+}
