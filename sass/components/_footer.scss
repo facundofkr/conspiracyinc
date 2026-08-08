@@ -28,7 +28,7 @@ footer {
     transform: translateY(-50%);
     z-index: 1000;
     transition: 0.2s ease;
-
+    }
     ul {
         display: flex;
         flex-direction: column;
@@ -49,7 +49,14 @@ footer {
     }
 
     @media (max-width: 768px) {
-        display: none;
+        
+        /* Al estar anidado, SASS lo compila como "footer h1, footer p, etc." 
+           Esto tiene mayor peso y pisa al estilo global naturalmente */
+        h1, h2, h3, p, span, .creador {
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            opacity: 0.7;
     }
 }
 

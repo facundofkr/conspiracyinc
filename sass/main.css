@@ -145,7 +145,8 @@ footer p, footer small, footer .creador {
   z-index: 1000;
   transition: 0.2s ease;
 }
-.nav-redes ul {
+
+ul {
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -154,19 +155,24 @@ footer p, footer small, footer .creador {
   list-style-type: none;
   font-size: 16px;
 }
-.nav-redes ul li {
+ul li {
   transition: 0.3s ease;
   filter: none;
 }
-.nav-redes ul li:hover {
+ul li:hover {
   filter: drop-shadow(10px 10px 20px rgb(243, 245, 243));
 }
+
 @media (max-width: 768px) {
-  .nav-redes {
-    display: none;
+  /* Al estar anidado, SASS lo compila como "footer h1, footer p, etc." 
+     Esto tiene mayor peso y pisa al estilo global naturalmente */
+  h1, h2, h3, p, span, .creador {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    opacity: 0.7;
   }
 }
-
 /* ========================================= */
 /* 3. 📄 PÁGINAS                             */
 /* ========================================= */
@@ -496,11 +502,18 @@ main ol {
   padding: 20px 0;
   margin: 0 auto;
   max-width: 800px;
+  text-align: center; /* Asegura que el texto quede bien centrado */
 }
 main ol li {
   list-style-type: none;
   margin-bottom: 25px;
   font-size: 24px;
+  /* 👇 Reducimos el espacio vertical entre renglones en celulares */
+}
+@media (max-width: 768px) {
+  main ol li {
+    margin-bottom: 15px;
+  }
 }
 main ol li .menuseleccion {
   font-family: "Chelsea Market", system-ui;
@@ -518,6 +531,15 @@ main ol li .menuseleccion:hover {
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transform: scale(1.03);
   color: #ffffff;
+}
+main ol li .menuseleccion {
+  /* 👇 Achicamos la letra de los enlaces en celulares */
+}
+@media (max-width: 768px) {
+  main ol li .menuseleccion {
+    font-size: 18px;
+    line-height: 1.3; /* Mejora la lectura si un título es muy largo y baja de renglón */
+  }
 }
 
 /* ========================================= */
