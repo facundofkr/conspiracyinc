@@ -97,7 +97,10 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
-
+header nav ul,
+.nav-principal ul {
+  /* 📱 Versión responsiva para celulares */
+}
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
@@ -218,6 +221,15 @@ ul li:hover {
 @media (max-width: 768px) {
   .nav-redes {
     display: none;
+  }
+  .nav-redes .imagenprincipal {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
