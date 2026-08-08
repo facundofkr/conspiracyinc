@@ -44,7 +44,9 @@ header nav ul,
     text-align: center;             
     list-style-position: inside;  
     list-style-type: none; 
+    
     display: flex;                  
+    flex-direction: row;          /* 👈 AGREGA ESTO: Fuerza la fila horizontal en PC */
     justify-content: center;        
     gap: 80px; 
     padding: 0;                     
@@ -62,14 +64,12 @@ header nav ul,
         }
     }
 
-    /* 📱 Versión responsiva (Perfectamente anidada aquí adentro) */
+    /* 📱 Versión responsiva para celulares */
     @media (max-width: 768px) {
-        flex-direction: row;     /* 👈 Pone los botones uno al lado del otro */
-        flex-wrap: wrap;         /* 👈 Si no entran los 4 en fila, arma un cuadrado de 2x2 automático */
+        flex-direction: row;     
+        flex-wrap: wrap;         
         justify-content: center;
-        gap: 10px;               /* 👈 Espacio prudente entre cada botón */
-        
-        /* 👈 Este margen negativo es el truco para "chupar" los botones hacia el logo */
+        gap: 10px;               
         margin-top: -15px;       
         
         li {
@@ -77,4 +77,4 @@ header nav ul,
             width: auto;
         }
     }
-} // 👈 Con esta llave cierra el bloque principal limpiamente
+}
