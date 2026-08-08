@@ -1,20 +1,17 @@
-/* ========================================= */
-/* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
-/* ========================================= */
 @use '../utilities/variables' as v;
 
 main.container {
-    /* 🛠️ Espaciado superior e inferior para todo el contenedor de la galería */
+    
     padding-top: 20px;
     padding-bottom: 40px;
 
-    /* 🛠️ Si tenés el texto (h2) o logo sueltos dentro del main, los acomodás así: */
+    
     h2 {
         margin-top: 50px;
-        margin-bottom: 70px; /* Separa el título del carrusel */
+        margin-bottom: 70px; 
     }
 
-    .logo-galeria { // Cambiá por la clase de tu logo si aplica
+    .logo-galeria { 
         margin-top: 10px;
         margin-bottom: 30px;
     }
@@ -28,7 +25,7 @@ main.container {
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(1, 170, 29, 0.2);
         
-        /* 🛠️ Separación inferior del carrusel respecto a lo que venga abajo (botones o grilla) */
+        
         margin-top: 10px; 
         margin-bottom: 10px; 
 
@@ -62,7 +59,7 @@ main.container {
         }
     }
 
-    /* 🛠️ Si tenés una botonera de filtros o navegación interna antes/después del carrusel */
+    
     .contenedor-botones {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -76,7 +73,7 @@ main.container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 30px; 
-    padding: 40px 0; /* 🛠️ Ajustamos padding: 40px arriba/abajo, 0 a los costados */
+    padding: 40px 0; 
     max-width: 1400px; 
     margin: 0 auto; 
 
@@ -96,16 +93,16 @@ main.container {
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        padding: 20px 10px; /* 🛠️ Más aire vertical en celulares */
+        padding: 20px 10px; 
     }
 }
 
 .nav-principal {
-    /* 🛠️ Modificá estos valores para dar el espacio exacto que quieras */
-    margin-top: 15px;    /* Espacio entre el carrusel (o el contenido de arriba) y los botones */
-    margin-bottom: 1px; /* Espacio entre los botones y el footer (o el final de la página) */
     
-    // Si querés darle aire por dentro a la barra
+    margin-top: 15px;    
+    margin-bottom: 1px; 
+    
+    
     padding-top: 15px;
     padding-bottom: 5px;
 }

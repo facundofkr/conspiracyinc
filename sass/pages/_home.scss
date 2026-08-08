@@ -1,14 +1,14 @@
 @use '../utilities/variables' as v;
 
 .home {
-    background-color: #050805; /* Verde/Gris muy oscuro */
+    background-color: #050805; 
     
-    /* Crea una cuadrícula estilo terminal o radar retro */
+    
     background-image: 
         linear-gradient(rgba(1, 170, 29, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(1, 170, 29, 0.05) 1px, transparent 1px);
         
-    /* El tamaño de cada cuadradito de la red */
+    
     background-size: 40px 40px; 
     background-position: center center;
     background-attachment: fixed;

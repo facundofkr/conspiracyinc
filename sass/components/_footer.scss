@@ -1,7 +1,4 @@
 
-/* ========================================= */
-/* 🖖 COMPONENTE: FOOTER                     */
-/* ========================================= */
 @use '../utilities/variables' as v;
 @use '../utilities/mixins' as m;
 
@@ -9,12 +6,12 @@ footer {
     text-align: center;
     padding: 15px 10px;
 
-    /* 👇 Estilo delicado para el copyright en celulares y escritorio */
+    
     p, small, .creador {
-        font-size: 10px; /* 👈 Letra bien pequeña y sutil */
+        font-size: 10px; 
         color: v.$color-texto-p;
         font-family: v.$font-black-ops;
-        opacity: 0.7;    /* 👈 Un toque transparente para que no moleste */
+        opacity: 0.7;    
         margin-top: 10px;
         letter-spacing: 1px;
     }
@@ -50,8 +47,6 @@ footer {
 
     @media (max-width: 768px) {
         
-        /* Al estar anidado, SASS lo compila como "footer h1, footer p, etc." 
-           Esto tiene mayor peso y pisa al estilo global naturalmente */
         h1, h2, h3, p, span, .creador {
             font-size: 14px;
             letter-spacing: 1px;

@@ -1,9 +1,6 @@
-/* ========================================= */
-/* 🖖 COMPONENTE: BOTONES (Con @extend)      */
-/* ========================================= */
 @use '../utilities/variables' as v;
 
-/* 1. Placeholder base que será extendido */
+
 %boton-base {
     font-family: v.$font-chelsea;
     color: v.$color-hueso;
@@ -15,7 +12,7 @@
     border: 1px solid rgba(255, 255, 255, 0.192);
 }
 
-/* 2. Clase principal que aplica el @extend */
+
 .botones {
     @extend %boton-base;
     background-color: v.$verde-boton;
@@ -27,9 +24,9 @@
         background-color: v.$verde-boton-hover; 
     }
 
-    /* 📱 Versión compacta para celulares */
+    
     @media (max-width: 768px) {
-        padding: 6px 14px; /* Botones más finitos y delicados */
-        font-size: 12px;   /* Letra más chica */
+        padding: 6px 14px; 
+        font-size: 12px;   
     }
 }

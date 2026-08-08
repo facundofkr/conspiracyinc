@@ -97,9 +97,6 @@ a {
   }
 }
 /* 2. COMPONENTS (Bloques reutilizables) */
-/* ========================================= */
-/* 🖖 COMPONENTE: HEADER                     */
-/* ========================================= */
 .logo-principal {
   height: 10vh;
   width: auto;
@@ -141,7 +138,7 @@ header nav ul,
   list-style-position: inside;
   list-style-type: none;
   display: flex;
-  flex-direction: row; /* 👈 AGREGA ESTO: Fuerza la fila horizontal en PC */
+  flex-direction: row;
   justify-content: center;
   gap: 80px;
   padding: 0;
@@ -159,10 +156,7 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
-header nav ul,
-.nav-principal ul {
-  /* 📱 Versión responsiva para celulares */
-}
+
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
@@ -179,19 +173,15 @@ header nav ul,
   }
 }
 
-/* ========================================= */
-/* 🖖 COMPONENTE: FOOTER                     */
-/* ========================================= */
 footer {
   text-align: center;
   padding: 15px 10px;
-  /* 👇 Estilo delicado para el copyright en celulares y escritorio */
 }
 footer p, footer small, footer .creador {
-  font-size: 10px; /* 👈 Letra bien pequeña y sutil */
+  font-size: 10px;
   color: rgb(214, 219, 216);
   font-family: "Black Ops One", system-ui;
-  opacity: 0.7; /* 👈 Un toque transparente para que no moleste */
+  opacity: 0.7;
   margin-top: 10px;
   letter-spacing: 1px;
 }
@@ -223,8 +213,6 @@ ul li:hover {
 }
 
 @media (max-width: 768px) {
-  /* Al estar anidado, SASS lo compila como "footer h1, footer p, etc." 
-     Esto tiene mayor peso y pisa al estilo global naturalmente */
   h1, h2, h3, p, span, .creador {
     font-size: 14px;
     letter-spacing: 1px;
@@ -232,10 +220,6 @@ ul li:hover {
     opacity: 0.7;
   }
 }
-/* ========================================= */
-/* 🖖 COMPONENTE: BOTONES (Con @extend)      */
-/* ========================================= */
-/* 1. Placeholder base que será extendido */
 .botones {
   font-family: "Chelsea Market", system-ui;
   color: antiquewhite;
@@ -247,7 +231,6 @@ ul li:hover {
   border: 1px solid rgba(255, 255, 255, 0.192);
 }
 
-/* 2. Clase principal que aplica el @extend */
 .botones {
   background-color: rgb(33, 46, 33);
   font-size: 14px;
@@ -257,23 +240,18 @@ ul li:hover {
 .botones:hover {
   background-color: rgb(1, 68, 21);
 }
-.botones {
-  /* 📱 Versión compacta para celulares */
-}
 @media (max-width: 768px) {
   .botones {
-    padding: 6px 14px; /* Botones más finitos y delicados */
-    font-size: 12px; /* Letra más chica */
+    padding: 6px 14px;
+    font-size: 12px;
   }
 }
 
 /* 👈 El nuevo archivo que creaste */
 /* 3. PAGES (Estilos específicos de cada vista) */
 .home {
-  background-color: #050805; /* Verde/Gris muy oscuro */
-  /* Crea una cuadrícula estilo terminal o radar retro */
+  background-color: #050805;
   background-image: linear-gradient(rgba(1, 170, 29, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(1, 170, 29, 0.05) 1px, transparent 1px);
-  /* El tamaño de cada cuadradito de la red */
   background-size: 40px 40px;
   background-position: center center;
   background-attachment: fixed;
@@ -494,18 +472,13 @@ ul li:hover {
   filter: drop-shadow(0 0 10px rgba(1, 170, 29, 0.8));
 }
 
-/* ========================================= */
-/* 🖖 ESTILOS DE PÁGINA: GALERÍA             */
-/* ========================================= */
 main.container {
-  /* 🛠️ Espaciado superior e inferior para todo el contenedor de la galería */
   padding-top: 20px;
   padding-bottom: 40px;
-  /* 🛠️ Si tenés el texto (h2) o logo sueltos dentro del main, los acomodás así: */
 }
 main.container h2 {
   margin-top: 50px;
-  margin-bottom: 70px; /* Separa el título del carrusel */
+  margin-bottom: 70px;
 }
 main.container .logo-galeria {
   margin-top: 10px;
@@ -519,7 +492,6 @@ main.container #videoCarousel {
   border-radius: 20px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(1, 170, 29, 0.2);
-  /* 🛠️ Separación inferior del carrusel respecto a lo que venga abajo (botones o grilla) */
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -547,9 +519,6 @@ main.container #videoCarousel .carousel-control-prev span,
 main.container #videoCarousel .carousel-control-next span {
   filter: drop-shadow(0px 0px 8px rgba(1, 170, 29, 0.8));
 }
-main.container {
-  /* 🛠️ Si tenés una botonera de filtros o navegación interna antes/después del carrusel */
-}
 main.container .contenedor-botones {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -562,7 +531,7 @@ main.container .contenedor-botones {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  padding: 40px 0; /* 🛠️ Ajustamos padding: 40px arriba/abajo, 0 a los costados */
+  padding: 40px 0;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -581,32 +550,27 @@ main.container .contenedor-botones {
 @media (max-width: 768px) {
   .contenedor-galeria {
     grid-template-columns: 1fr;
-    padding: 20px 10px; /* 🛠️ Más aire vertical en celulares */
+    padding: 20px 10px;
   }
 }
 
 .nav-principal {
-  /* 🛠️ Modificá estos valores para dar el espacio exacto que quieras */
-  margin-top: 15px; /* Espacio entre el carrusel (o el contenido de arriba) y los botones */
-  margin-bottom: 1px; /* Espacio entre los botones y el footer (o el final de la página) */
+  margin-top: 15px;
+  margin-bottom: 1px;
   padding-top: 15px;
   padding-bottom: 5px;
 }
 
-/* ========================================= */
-/* 📂 ESTILOS DE PÁGINA: CASOS (MENU)        */
-/* ========================================= */
 main ol {
   padding: 20px 0;
   margin: 0 auto;
   max-width: 800px;
-  text-align: center; /* Asegura que el texto quede bien centrado */
+  text-align: center;
 }
 main ol li {
   list-style-type: none;
   margin-bottom: 25px;
   font-size: 24px;
-  /* 👇 Reducimos el espacio vertical entre renglones en celulares */
 }
 @media (max-width: 768px) {
   main ol li {
@@ -630,19 +594,13 @@ main ol li .menuseleccion:hover {
   transform: scale(1.03);
   color: #ffffff;
 }
-main ol li .menuseleccion {
-  /* 👇 Achicamos la letra de los enlaces en celulares */
-}
 @media (max-width: 768px) {
   main ol li .menuseleccion {
     font-size: 18px;
-    line-height: 1.3; /* Mejora la lectura si un título es muy largo y baja de renglón */
+    line-height: 1.3;
   }
 }
 
-/* ========================================= */
-/* ☢️ ESTILOS DE PÁGINA: NOSOTROS            */
-/* ========================================= */
 .yo {
   display: inline-block;
   border-radius: 10px;
