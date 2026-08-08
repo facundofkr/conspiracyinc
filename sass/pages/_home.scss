@@ -1,15 +1,17 @@
-/* ========================================= */
-/* 🚀 ESTILOS DE PÁGINA: HOME                */
-/* ========================================= */
 @use '../utilities/variables' as v;
 
 .home {
-    background-image: url(../assets/imgs/space.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    background-attachment: fixed; 
+    background-color: #050805; /* Verde/Gris muy oscuro */
     
+    /* Crea una cuadrícula estilo terminal o radar retro */
+    background-image: 
+        linear-gradient(rgba(1, 170, 29, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(1, 170, 29, 0.05) 1px, transparent 1px);
+        
+    /* El tamaño de cada cuadradito de la red */
+    background-size: 40px 40px; 
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .imagenprincipal {
