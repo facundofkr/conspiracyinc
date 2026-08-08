@@ -64,9 +64,13 @@ header nav ul,
 
     /* 📱 Versión responsiva (Perfectamente anidada aquí adentro) */
     @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 6px; 
-        align-items: center;
+        flex-direction: row;     /* 👈 Pone los botones uno al lado del otro */
+        flex-wrap: wrap;         /* 👈 Si no entran los 4 en fila, arma un cuadrado de 2x2 automático */
+        justify-content: center;
+        gap: 10px;               /* 👈 Espacio prudente entre cada botón */
+        
+        /* 👈 Este margen negativo es el truco para "chupar" los botones hacia el logo */
+        margin-top: -15px;       
         
         li {
             margin: 0;
