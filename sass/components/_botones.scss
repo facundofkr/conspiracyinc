@@ -22,18 +22,18 @@
         background-color: v.$verde-boton-hover; 
     }
 
-    /* 📱 Versión Móvil: Corregida y limpia */
+    
     @media (max-width: 768px) {
         width: 100%;          
-        padding: 8px 12px;  /* 👈 Botón más flaquito para ganar espacio */
-        font-size: 12px;   /* 👈 Letra chica para que entren las palabras largas */
-        letter-spacing: 0; /* 👈 Juntamos las letras para ahorrar espacio */
+        padding: 8px 12px;  
+        font-size: 12px;   
+        letter-spacing: 0; 
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;  
-        margin-bottom: 5px; /* 👈 Un poquito de espacio entre botones */
-        margin-top: 5px; /* 👈 Un poquito de espacio entre botones */
+        margin-bottom: 5px; 
+        margin-top: 5px; 
     }
 }

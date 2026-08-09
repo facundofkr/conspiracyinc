@@ -2,13 +2,9 @@
 
 .home {
     background-color: #050805; 
-    
-    
     background-image: 
         linear-gradient(rgba(1, 170, 29, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(1, 170, 29, 0.05) 1px, transparent 1px);
-        
-    
     background-size: 40px 40px; 
     background-position: center center;
     background-attachment: fixed;
@@ -22,23 +18,20 @@
     filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
     transition: 0.2s ease;
     
-    /* Márgenes para PC */
+    
     margin: 15px auto 40px auto;
     
     &:hover {
         transform: scale(1.01);
     }
 
-    /* 📱 Versión Móvil (¡Ahora sí, anidada en el lugar correcto!) */
+    
     @media (max-width: 768px) {
         width: 100%;
         max-width: 330px;
         height: auto;
         display: block;
         object-fit: contain;
-        
-        /* 👇 ACÁ CONTROLÁS EL ESPACIO MANUALMENTE */
-        /* Orden: margin: [ARRIBA] [DERECHA] [ABAJO] [IZQUIERDA]; */
         margin: -10px auto 5px auto; 
     }
 }
@@ -75,7 +68,7 @@
         }
     }
     
-    /* 📱 Oculta las redes en el celular */
+    
     @media (max-width: 768px) {
         display: none;
     }

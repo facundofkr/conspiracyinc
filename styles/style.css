@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/* ========================================= */
-/* 🖖 ÍNDICE PRINCIPAL: CONSPIRACY INC.      */
-/* ========================================= */
 /* 1. UTILITIES (Variables, Mixins, Reset, Tipografía) */
-/* Dentro de sass/utilities/_typography.scss */
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
 * {
   margin: 0;
@@ -85,7 +81,6 @@ a {
   font-family: "Black Ops One", system-ui;
 }
 
-/* 👈 El nuevo archivo que creaste */
 @keyframes aparecer {
   from {
     transform: scale(0.8);
@@ -127,7 +122,6 @@ a {
   }
 }
 
-/* 📌 BARRA DE NAVEGACIÓN */
 header nav ul,
 .nav-principal ul {
   font-family: "Chelsea Market", system-ui;
@@ -156,25 +150,21 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
-header nav ul,
-.nav-principal ul {
-  /* 📱 Versión responsiva (Corregida sin anidamiento accidental) */
-}
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
     flex-direction: row;
-    flex-wrap: nowrap; /* 👈 Obliga a que los 4 queden en una línea horizontal */
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
-    gap: 15px; /* 👈 Un hueco muy chiquito entre los botones */
+    gap: 15px;
     padding: 0 5px;
     margin: 0;
     margin-bottom: -30px;
   }
   header nav ul li,
   .nav-principal ul li {
-    margin: 0; /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -226,22 +216,19 @@ ul li:hover {
     letter-spacing: 1px;
     margin-top: 20px;
     opacity: 0.7;
-  } /* 👈 ¡Acá faltaba cerrar esta llave! */
-  /* 👇 1. Empujamos TODO el footer hacia abajo para alejarlo de los botones */
-  footer {
-    margin-top: 80px; /* 👈 Agrandá este número si querés que baje aún más */
   }
-  /* 👇 2. Achicamos el h3 a mano */
+  footer {
+    margin-top: 80px;
+  }
   footer h3 {
-    font-size: 12px; /* 👈 Modificá este número para el tamaño de la letra */
-    margin-top: 20px; /* 👈 Le da un respiro extra hacia abajo */
+    font-size: 12px;
+    margin-top: 20px;
     letter-spacing: 1px;
     opacity: 0.7;
   }
-  /* 👇 3. Reglas del h4 */
   footer h4 {
     font-size: 8px;
-    margin-top: 1px; /* 👈 Separación entre el h3 y el h4 */
+    margin-top: 1px;
     letter-spacing: 1px;
     opacity: 0.7;
   }
@@ -266,26 +253,22 @@ ul li:hover {
 .botones:hover {
   background-color: rgb(1, 68, 21);
 }
-.botones {
-  /* 📱 Versión Móvil: Corregida y limpia */
-}
 @media (max-width: 768px) {
   .botones {
     width: 100%;
-    padding: 8px 12px; /* 👈 Botón más flaquito para ganar espacio */
-    font-size: 12px; /* 👈 Letra chica para que entren las palabras largas */
-    letter-spacing: 0; /* 👈 Juntamos las letras para ahorrar espacio */
+    padding: 8px 12px;
+    font-size: 12px;
+    letter-spacing: 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    margin-bottom: 5px; /* 👈 Un poquito de espacio entre botones */
-    margin-top: 5px; /* 👈 Un poquito de espacio entre botones */
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 }
 
-/* 👈 El nuevo archivo que creaste */
 /* 3. PAGES (Estilos específicos de cada vista) */
 .home {
   background-color: #050805;
@@ -302,14 +285,10 @@ ul li:hover {
   border-radius: 20px;
   filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
   transition: 0.2s ease;
-  /* Márgenes para PC */
   margin: 15px auto 40px auto;
 }
 .imagenprincipal:hover {
   transform: scale(1.01);
-}
-.imagenprincipal {
-  /* 📱 Versión Móvil (¡Ahora sí, anidada en el lugar correcto!) */
 }
 @media (max-width: 768px) {
   .imagenprincipal {
@@ -319,8 +298,6 @@ ul li:hover {
     display: block;
     -o-object-fit: contain;
        object-fit: contain;
-    /* 👇 ACÁ CONTROLÁS EL ESPACIO MANUALMENTE */
-    /* Orden: margin: [ARRIBA] [DERECHA] [ABAJO] [IZQUIERDA]; */
     margin: -10px auto 5px auto;
   }
 }
@@ -353,9 +330,6 @@ ul li:hover {
   height: 45px;
   padding: 0;
   display: block;
-}
-.nav-redes {
-  /* 📱 Oculta las redes en el celular */
 }
 @media (max-width: 768px) {
   .nav-redes {
@@ -444,8 +418,8 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 5px;
-  flex-direction: column; /* Pone el checkbox arriba y el botón abajo */
-  align-items: center; /* Los centra horizontalmente */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
@@ -474,12 +448,11 @@ ul li:hover {
     margin: 0;
   }
   .contacto-container form div {
-    flex-direction: column; /* Pone el checkbox arriba y el botón abajo */
-    align-items: center; /* Los centra horizontalmente */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 20px; /* Espacio entre el checkbox y el botón */
-    /* Asegura que el botón ocupe un buen ancho centrado */
+    gap: 20px;
   }
   .contacto-container form div input[type=submit] {
     width: 100%;

@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
-/* ========================================= */
-/* 🌐 TIPOGRAFÍAS EXTERNAS                   */
-/* ========================================= */
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap");
 * {
   margin: 0;
@@ -35,9 +29,7 @@ header, main, footer {
     opacity: 1;
   }
 }
-/* ========================================= */
-/* 2. 📦 COMPONENTES                         */
-/* ========================================= */
+
 .logo-principal {
   height: 10vh;
   width: auto;
@@ -68,7 +60,6 @@ header, main, footer {
   }
 }
 
-/* 📌 BARRA DE NAVEGACIÓN */
 header nav ul,
 .nav-principal ul {
   font-family: "Chelsea Market", system-ui;
@@ -97,25 +88,21 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
-header nav ul,
-.nav-principal ul {
-  /* 📱 Versión responsiva (Corregida sin anidamiento accidental) */
-}
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
     flex-direction: row;
-    flex-wrap: nowrap; /* 👈 Obliga a que los 4 queden en una línea horizontal */
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
-    gap: 15px; /* 👈 Un hueco muy chiquito entre los botones */
+    gap: 15px;
     padding: 0 5px;
     margin: 0;
     margin-bottom: -30px;
   }
   header nav ul li,
   .nav-principal ul li {
-    margin: 0; /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -167,29 +154,24 @@ ul li:hover {
     letter-spacing: 1px;
     margin-top: 20px;
     opacity: 0.7;
-  } /* 👈 ¡Acá faltaba cerrar esta llave! */
-  /* 👇 1. Empujamos TODO el footer hacia abajo para alejarlo de los botones */
-  footer {
-    margin-top: 80px; /* 👈 Agrandá este número si querés que baje aún más */
   }
-  /* 👇 2. Achicamos el h3 a mano */
+  footer {
+    margin-top: 80px;
+  }
   footer h3 {
-    font-size: 12px; /* 👈 Modificá este número para el tamaño de la letra */
-    margin-top: 20px; /* 👈 Le da un respiro extra hacia abajo */
+    font-size: 12px;
+    margin-top: 20px;
     letter-spacing: 1px;
     opacity: 0.7;
   }
-  /* 👇 3. Reglas del h4 */
   footer h4 {
     font-size: 8px;
-    margin-top: 1px; /* 👈 Separación entre el h3 y el h4 */
+    margin-top: 1px;
     letter-spacing: 1px;
     opacity: 0.7;
   }
 }
-/* ========================================= */
-/* 3. 📄 PÁGINAS                             */
-/* ========================================= */
+
 .home {
   background-color: #050805;
   background-image: linear-gradient(rgba(1, 170, 29, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(1, 170, 29, 0.05) 1px, transparent 1px);
@@ -205,14 +187,10 @@ ul li:hover {
   border-radius: 20px;
   filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
   transition: 0.2s ease;
-  /* Márgenes para PC */
   margin: 15px auto 40px auto;
 }
 .imagenprincipal:hover {
   transform: scale(1.01);
-}
-.imagenprincipal {
-  /* 📱 Versión Móvil (¡Ahora sí, anidada en el lugar correcto!) */
 }
 @media (max-width: 768px) {
   .imagenprincipal {
@@ -221,9 +199,7 @@ ul li:hover {
     height: auto;
     display: block;
     -o-object-fit: contain;
-       object-fit: contain;
-    /* 👇 ACÁ CONTROLÁS EL ESPACIO MANUALMENTE */
-    /* Orden: margin: [ARRIBA] [DERECHA] [ABAJO] [IZQUIERDA]; */
+    object-fit: contain;
     margin: -10px auto 5px auto;
   }
 }
@@ -256,9 +232,6 @@ ul li:hover {
   height: 45px;
   padding: 0;
   display: block;
-}
-.nav-redes {
-  /* 📱 Oculta las redes en el celular */
 }
 @media (max-width: 768px) {
   .nav-redes {
@@ -347,8 +320,8 @@ ul li:hover {
   display: flex;
   align-items: center;
   gap: 5px;
-  flex-direction: column; /* Pone el checkbox arriba y el botón abajo */
-  align-items: center; /* Los centra horizontalmente */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
 }
@@ -377,12 +350,11 @@ ul li:hover {
     margin: 0;
   }
   .contacto-container form div {
-    flex-direction: column; /* Pone el checkbox arriba y el botón abajo */
-    align-items: center; /* Los centra horizontalmente */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 20px; /* Espacio entre el checkbox y el botón */
-    /* Asegura que el botón ocupe un buen ancho centrado */
+    gap: 20px;
   }
   .contacto-container form div input[type=submit] {
     width: 100%;

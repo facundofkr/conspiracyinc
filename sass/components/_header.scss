@@ -31,7 +31,7 @@
     }
 }
 
-/* 📌 BARRA DE NAVEGACIÓN */
+
 header nav ul, 
 .nav-principal ul {
     font-family: v.$font-chelsea;   
@@ -60,19 +60,19 @@ header nav ul,
         }
     }
 
-    /* 📱 Versión responsiva (Corregida sin anidamiento accidental) */
+    
     @media (max-width: 768px) {
         flex-direction: row;
-        flex-wrap: nowrap; /* 👈 Obliga a que los 4 queden en una línea horizontal */
+        flex-wrap: nowrap; 
         justify-content: center; 
         width: 100%;             
-        gap: 15px;          /* 👈 Un hueco muy chiquito entre los botones */
+        gap: 15px;          
         padding: 0 5px;
         margin: 0; 
         margin-bottom: -30px;
         
         li {
-            margin: 0;     /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */
+            margin: 0;     
             padding: 0;
             display: flex;
             justify-content: center;
