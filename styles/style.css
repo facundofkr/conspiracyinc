@@ -458,9 +458,13 @@ ul li:hover {
 }
 @media (max-width: 768px) {
   .contacto-container form {
-    padding: 5px 5px;
+    padding: 10px 10px;
     font-size: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    margin: 0;
   }
 }
 
