@@ -27,10 +27,14 @@
     
     @media (max-width: 768px) {
     .botones {
-        padding: 6px 2px;  /* Reducimos el relleno lateral al mínimo */
-        font-size: 9px;   /* Letra compacta */
-        width: 100%;       /* Ocupa todo el espacio que le da el flex: 1 */
-        text-align: center;
+        width: 100%;             /* Obliga al botón a llenar su contenedor (el li) */
+        padding: 8px 2px;        /* Bajamos el relleno lateral (2px) para que entre el texto */
+        font-size: 11px;         /* Achicamos un poco la letra */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;  /* Fundamental para que no se desborde */
+        word-break: break-word;  /* Por si la palabra "Contactanos" es muy larga */
     }
 }
 }

@@ -65,18 +65,20 @@ header nav ul,
     /* 📱 Versión móvil (en _header.scss) */
     @media (max-width: 768px) {
         flex-direction: row;     
-        flex-wrap: nowrap;       /* Mantiene todo en una línea */
-        justify-content: space-evenly; 
-        gap: 1px;                /* Hueco mínimo entre botones */
+        flex-wrap: nowrap;       /* Obliga a mantener 1 sola línea */
+        justify-content: center;
+        gap: 4px;                /* Hueco mínimo de 4px entre botones */
         margin-top: -15px;       
-        width: 100%;             /* Asegura que use todo el ancho del celular */
-        padding: 0 1px;          /* Un mini respiro a los costados de la pantalla */
+        width: 100%;             /* Usa todo el ancho del celular */
+        padding: 0 10px;         /* Da un respiro de 10px a los costados de la pantalla */
+        box-sizing: border-box;  /* Evita que el padding sume ancho extra y rompa la pantalla */
         
         li {
             margin: 0;
-            flex: 1;             /* 👈 LA CLAVE: Reparte el espacio en 4 porciones iguales */
+            padding: 0;
+            /* 👇 LA CLAVE MAGICA: Les dice "arranquen de tamaño cero y crezcan todos exactamente igual" */
+            flex: 1 1 0; 
             display: flex;
-            justify-content: center;
         }
     }
 }
