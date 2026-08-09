@@ -21,11 +21,25 @@
     border-radius: 20px;
     filter: drop-shadow(10px 10px 20px rgb(37, 129, 1));
     transition: 0.2s ease;
-    margin: 15px 0;
-    margin-bottom: 40px;
+    
+    /* Márgenes para PC */
+    margin: 15px auto 40px auto;
     
     &:hover {
         transform: scale(1.01);
+    }
+
+    /* 📱 Versión Móvil (¡Ahora sí, anidada en el lugar correcto!) */
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 330px;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        
+        /* 👇 ACÁ CONTROLÁS EL ESPACIO MANUALMENTE */
+        /* Orden: margin: [ARRIBA] [DERECHA] [ABAJO] [IZQUIERDA]; */
+        margin: -10px auto 5px auto; 
     }
 }
 
@@ -60,20 +74,10 @@
             }
         }
     }
+    
+    /* 📱 Oculta las redes en el celular */
     @media (max-width: 768px) {
         display: none;
-
-        .imagenprincipal {
-        width: 90%;
-        max-width: 300px;
-        height: auto;
-        display: block;
-        margin: 0 auto 5px auto;
-        object-fit: contain;
-        margin-bottom: 1px;
-        margin-top: 1px;
-        
-    }
     }
 }
 
