@@ -30,10 +30,17 @@
         width: 90%;
         height: auto;
         max-width: 300px;
+        margin: 10px auto 20px auto;
         
         img {
             height: auto; 
             width: 100%;
+
+        .titulo-principal {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
         }
     }
 }
@@ -42,4 +49,6 @@ header nav.nav-nosotros {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 

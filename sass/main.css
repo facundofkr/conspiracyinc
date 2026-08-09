@@ -574,10 +574,15 @@ main ol li .menuseleccion:hover {
     width: 90%;
     height: auto;
     max-width: 300px;
+    margin: 10px auto 20px auto;
   }
   .yo img {
     height: auto;
     width: 100%;
+  }
+  .yo img .titulo-principal {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
