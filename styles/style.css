@@ -254,9 +254,9 @@ ul li:hover {
 }
 @media (max-width: 768px) {
   .botones .botones {
-    width: 80%;
-    padding: 6px 10px;
-    font-size: 9px; /* Letra clara y fácil de presionar */
+    width: 70%;
+    padding: 4px 8px;
+    font-size: 5px; /* Letra clara y fácil de presionar */
     text-align: center;
     display: block;
     box-sizing: border-box;
