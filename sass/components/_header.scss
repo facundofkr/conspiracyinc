@@ -61,23 +61,20 @@ header nav ul,
         }
     }
 
-    /* 📱 Versión responsiva para celulares */
-    /* 📱 Versión móvil (en _header.scss) */
-    /* 📱 Versión móvil (en _header.scss) */
-    /* 📱 Versión móvil (en _header.scss) */
+    
     @media (max-width: 768px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 👈 Obliga a crear 2 columnas iguales */
-        gap: 10px 8px;                         /* Espacio vertical (12px) y horizontal (10px) */
-        max-width: 290px;                       /* Ancho perfecto para que quede centrado en el celular */
-        margin: -10px auto 0 auto;              /* Centra la grilla en la pantalla */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px 8px; /* Controla la separación entre botones */                         
+        max-width: 280px; /* Ajusta el ancho total del bloque de botones */                      
+        margin: -10px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */              
         padding: 0;
 
         li {
             margin: 0;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centra los botones dentro de sus celdas de la grilla */
         }
     }
-}
+        }

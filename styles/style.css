@@ -156,21 +156,14 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
-header nav ul,
-.nav-principal ul {
-  /* 📱 Versión responsiva para celulares */
-  /* 📱 Versión móvil (en _header.scss) */
-  /* 📱 Versión móvil (en _header.scss) */
-  /* 📱 Versión móvil (en _header.scss) */
-}
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 👈 Obliga a crear 2 columnas iguales */
-    gap: 10px 8px; /* Espacio vertical (12px) y horizontal (10px) */
-    max-width: 290px; /* Ancho perfecto para que quede centrado en el celular */
-    margin: -10px auto 0 auto; /* Centra la grilla en la pantalla */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 8px; /* Controla la separación entre botones */
+    max-width: 280px; /* Ajusta el ancho total del bloque de botones */
+    margin: -10px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */
     padding: 0;
   }
   header nav ul li,
@@ -178,7 +171,7 @@ header nav ul,
     margin: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra los botones dentro de sus celdas de la grilla */
   }
 }
 
@@ -250,13 +243,15 @@ ul li:hover {
   background-color: rgb(1, 68, 21);
 }
 .botones {
-  /* 📱 Tamaño ajustado del botón en _botones.scss */
+  /* 📱 Versión Móvil: Corregida y limpia */
 }
 @media (max-width: 768px) {
-  .botones .botones {
-    width: 70%;
-    padding: 4px 8px;
-    font-size: 5px; /* Letra clara y fácil de presionar */
+  .botones {
+    /* 👇 Acá manejás el tamaño A MANO */
+    width: 100%; /* Que ocupe el ancho que le asigne la grilla */
+    max-width: 120px; /* 👈 Ajustá este número para hacer el botón más angosto o ancho */
+    padding: 6px 0; /* 👈 Ajustá el primer número para hacerlo más flaquito */
+    font-size: 12px; /* 👈 Regulá el tamaño de la letra a tu gusto */
     text-align: center;
     display: block;
     box-sizing: border-box;

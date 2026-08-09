@@ -1,6 +1,5 @@
 @use '../utilities/variables' as v;
 
-
 %boton-base {
     font-family: v.$font-chelsea;
     color: v.$color-hueso;
@@ -11,7 +10,6 @@
     transition: background-color 0.2s ease;
     border: 1px solid rgba(255, 255, 255, 0.192);
 }
-
 
 .botones {
     @extend %boton-base;
@@ -24,16 +22,16 @@
         background-color: v.$verde-boton-hover; 
     }
 
-    
-    /* 📱 Tamaño ajustado del botón en _botones.scss */
-@media (max-width: 768px) {
-    .botones {
-        width: 70%;
-        padding: 4px 8px;
-        font-size: 5px;        /* Letra clara y fácil de presionar */
+    /* 📱 Versión Móvil: Corregida y limpia */
+    @media (max-width: 768px) {
+        /* 👇 Acá manejás el tamaño A MANO */
+        width: 100%;          /* Que ocupe el ancho que le asigne la grilla */
+        max-width: 120px;     /* 👈 Ajustá este número para hacer el botón más angosto o ancho */
+        padding: 6px 0;       /* 👈 Ajustá el primer número para hacerlo más flaquito */
+        font-size: 12px;      /* 👈 Regulá el tamaño de la letra a tu gusto */
+        
         text-align: center;
         display: block;
         box-sizing: border-box;  
     }
-}
 }
