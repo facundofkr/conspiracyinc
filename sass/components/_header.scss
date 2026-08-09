@@ -63,18 +63,20 @@ header nav ul,
 
     
     @media (max-width: 768px) {
+    header nav ul, 
+    .nav-principal ul {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px 8px; /* Controla la separación entre botones */                         
-        max-width: 280px; /* Ajusta el ancho total del bloque de botones */                      
-        margin: -10px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */              
+        grid-template-columns: max-content max-content; 
+        justify-content: center; 
+        width: 100%;             
+        gap: 12px; 
         padding: 0;
-
+        margin: 0; 
+    }
         li {
             margin: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center; /* Centra los botones dentro de sus celdas de la grilla */
+            padding: 0;
         }
     }
-        }
+}    
+        
