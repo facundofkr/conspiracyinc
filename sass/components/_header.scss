@@ -62,16 +62,21 @@ header nav ul,
     }
 
     /* 📱 Versión responsiva para celulares */
+    /* 📱 Versión móvil (en _header.scss) */
     @media (max-width: 768px) {
         flex-direction: row;     
-        flex-wrap: nowrap;         
-        justify-content: center;
-        gap: 4px;               
+        flex-wrap: nowrap;       /* Mantiene todo en una línea */
+        justify-content: space-evenly; 
+        gap: 2px;                /* Hueco mínimo entre botones */
         margin-top: -15px;       
+        width: 100%;             /* Asegura que use todo el ancho del celular */
+        padding: 0 5px;          /* Un mini respiro a los costados de la pantalla */
         
         li {
             margin: 0;
-            width: auto;
+            flex: 1;             /* 👈 LA CLAVE: Reparte el espacio en 4 porciones iguales */
+            display: flex;
+            justify-content: center;
         }
     }
 }
