@@ -26,13 +26,15 @@
         gap: 15px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
         margin: 0; 
+        
 
         label {
             color: v.$color-hueso;
             font-family: v.$font-chelsea;
             font-size: 20px;
-            text-align: left;
+            text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            
         }
 
         input[type="text"],
@@ -46,6 +48,8 @@
             font-family: system-ui, sans-serif;
             font-size: 16px;
             transition: 0.3s ease;
+
+            
 
             &:focus {
                 outline: none;
