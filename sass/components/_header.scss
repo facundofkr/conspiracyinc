@@ -64,9 +64,9 @@ header nav ul,
     /* 📱 Versión responsiva para celulares */
     @media (max-width: 768px) {
         flex-direction: row;     
-        flex-wrap: wrap;         
+        flex-wrap: nowrap;         
         justify-content: center;
-        gap: 10px;               
+        gap: 6px;               
         margin-top: -15px;       
         
         li {
