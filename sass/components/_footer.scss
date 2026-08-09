@@ -52,14 +52,30 @@ footer {
             letter-spacing: 1px;
             margin-top: 20px;
             opacity: 0.7;
+        } /* 👈 ¡Acá faltaba cerrar esta llave! */
 
-        footer, h3, h4 {
-            margin-top: 80px;
-            font-size: 14px;
+        /* 👇 1. Empujamos TODO el footer hacia abajo para alejarlo de los botones */
+        footer {
+            margin-top: 60px; /* 👈 Agrandá este número si querés que baje aún más */
+        }
+
+        /* 👇 2. Achicamos el h3 a mano */
+        footer h3 {
+            font-size: 12px;  /* 👈 Modificá este número para el tamaño de la letra */
+            margin-top: 10px; /* 👈 Le da un respiro extra hacia abajo */
             letter-spacing: 1px;
-            margin-top: 20px;
             opacity: 0.7;
+        }
+
+        /* 👇 3. Reglas del h4 */
+        footer h4 {
+            font-size: 8px;
+            margin-top: 2px;  /* 👈 Separación entre el h3 y el h4 */
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
     }
-}
-    }
+    
+
+    
 
