@@ -17,17 +17,15 @@ main.container {
     }
 
     #videoCarousel {
-        max-width: 800px; 
+        max-width: 700px; 
         margin: 0 auto;
-        padding: 20px;
+        padding: 5px;
         background-color: rgba(33, 46, 33, 0.4); 
-        border-radius: 20px;
+        border-radius: 10px;
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(1, 170, 29, 0.2);
-        
-        
-        margin-top: 10px; 
-        margin-bottom: 10px; 
+        margin-top: 0px; 
+        margin-bottom: 0px; 
 
         .carousel-inner {
             iframe {
@@ -39,6 +37,15 @@ main.container {
                 &:hover {
                     transform: scale(1.01);
                     filter: drop-shadow(0px 0px 15px v.$verde-brillo-alien);
+
+        @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 10px 5px; 
+        margin-top: 0px;    
+        margin-bottom: 0px; 
+        padding-top: 0px;
+    padding-bottom: 0px;
+    }
                 }
             }
         }
@@ -69,37 +76,7 @@ main.container {
     }
 }
 
-.contenedor-galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; 
-    padding: 40px 0; 
-    max-width: 1400px; 
-    margin: 0 auto; 
 
-    iframe {
-        width: 100%; 
-        aspect-ratio: 16 / 9; 
-        border-radius: 15px; 
-        border: none; 
-        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8); 
-        transition: 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05); 
-            filter: drop-shadow(0px 0px 15px v.$verde-brillo-alien); 
-        }
-    }
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        padding: 10px 5px; 
-        margin-top: 0px;    
-        margin-bottom: 0px; 
-        padding-top: 0px;
-    padding-bottom: 0px;
-    }
-}
 
 .nav-principal {
     margin-top: 15px;    
@@ -107,3 +84,4 @@ main.container {
     padding-top: 15px;
     padding-bottom: 5px;
 }
+
