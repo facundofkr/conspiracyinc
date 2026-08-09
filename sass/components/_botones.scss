@@ -29,21 +29,17 @@
 @media (max-width: 768px) {
     .botones {
         width: 100%;             
-        
-        /* 👇 6px arriba/abajo, y CERO a los costados para ganar espacio */
-        padding: 6px 0;          
-        
-        /* 👇 Letra bien chiquita para que palabras largas no rompan el botón */
-        font-size: 9.5px;        
-        
-        /* 👇 Si tenías letter-spacing, lo anulamos acá para que las letras no se separen */
-        letter-spacing: 0;       
-        
+        padding: 8px 2px;          
+        font-size: 10px; /* 👈 Letra bien pequeña */       
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;  
         text-align: center;
+        
+        /* 👇 Estas dos líneas obligan al texto a no desbordar */
+        overflow-wrap: break-word; 
+        word-wrap: break-word;     
     }
 }
 }

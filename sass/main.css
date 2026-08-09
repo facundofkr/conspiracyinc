@@ -102,28 +102,24 @@ header nav ul,
   /* 📱 Versión responsiva para celulares */
   /* 📱 Versión móvil (en _header.scss) */
   /* 📱 Versión móvil (en _header.scss) */
+  /* 📱 Versión móvil (en _header.scss) */
 }
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    /* 👇 Centrado absoluto: auto a los costados para que quede en el medio */
+    display: grid; /* 👈 Cambiamos flex por grid */
+    grid-template-columns: repeat(4, 1fr); /* 👈 Obliga a crear 4 columnas exactamente iguales */
+    gap: 4px;
+    width: 96%;
     margin: -15px auto 0 auto;
-    /* 👇 Limpiamos cualquier padding por defecto que empuje la caja a la derecha */
     padding: 0;
-    /* 👇 95% para que use casi toda la pantalla pero deje un margen mínimo a los bordes físicos */
-    width: 95%;
   }
   header nav ul li,
   .nav-principal ul li {
     margin: 0;
     padding: 0;
-    flex: 1; /* Reparte en 4 partes iguales */
-    display: flex;
+    width: 100%;
+    display: flex; /* Mantenemos flex acá adentro para centrar el botón */
     justify-content: center;
   }
 }
