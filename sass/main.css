@@ -234,8 +234,8 @@ ul li:hover {
     margin: 0 auto 5px auto;
     -o-object-fit: contain;
        object-fit: contain;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-top: 1px;
   }
 }
 

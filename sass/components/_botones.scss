@@ -25,7 +25,7 @@
     /* 📱 Versión Móvil: Corregida y limpia */
     @media (max-width: 768px) {
         width: 100%;          
-        padding: 4px 8px;  /* 👈 Botón más flaquito para ganar espacio */
+        padding: 8px 12px;  /* 👈 Botón más flaquito para ganar espacio */
         font-size: 12px;   /* 👈 Letra chica para que entren las palabras largas */
         letter-spacing: 0; /* 👈 Juntamos las letras para ahorrar espacio */
         text-align: center;
@@ -33,5 +33,7 @@
         justify-content: center;
         align-items: center;
         box-sizing: border-box;  
+        margin-bottom: 5px; /* 👈 Un poquito de espacio entre botones */
+        margin-top: 5px; /* 👈 Un poquito de espacio entre botones */
     }
 }
