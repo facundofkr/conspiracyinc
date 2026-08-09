@@ -133,7 +133,10 @@
             input[type="submit"] {
                 width: 100%;
                 max-width: 100px;
-                justify-content: center;
+                display: flex;
+                justify-content: center;    
+                align-items: center;
+                text-align: center;
             }
         }
         
