@@ -477,12 +477,12 @@ ul li:hover {
     align-items: center; /* Los centra horizontalmente */
     justify-content: center;
     width: 100%;
-    gap: 15px; /* Espacio entre el checkbox y el botón */
+    gap: 20px; /* Espacio entre el checkbox y el botón */
     /* Asegura que el botón ocupe un buen ancho centrado */
   }
   .contacto-container form div input[type=submit] {
     width: 100%;
-    max-width: 100px;
+    max-width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
