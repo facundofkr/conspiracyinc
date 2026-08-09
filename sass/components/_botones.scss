@@ -28,18 +28,12 @@
     /* 📱 Tamaño ajustado del botón en _botones.scss */
 @media (max-width: 768px) {
     .botones {
-        width: 100%;             
-        padding: 6px 2px;          
-        font-size: 8px; /* 👈 Letra bien pequeña */       
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;  
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 13px;        /* Letra clara y fácil de presionar */
         text-align: center;
-        
-        /* 👇 Estas dos líneas obligan al texto a no desbordar */
-        overflow-wrap: break-word; 
-        word-wrap: break-word;     
+        display: block;
+        box-sizing: border-box;  
     }
 }
 }

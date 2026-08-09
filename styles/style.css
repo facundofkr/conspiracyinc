@@ -166,19 +166,18 @@ header nav ul,
 @media (max-width: 768px) {
   header nav ul,
   .nav-principal ul {
-    display: grid; /* 👈 Cambiamos flex por grid */
-    grid-template-columns: repeat(4, 1fr); /* 👈 Obliga a crear 4 columnas exactamente iguales */
-    gap: 4px;
-    width: 96%;
-    margin: -15px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 👈 Obliga a crear 2 columnas iguales */
+    gap: 12px 10px; /* Espacio vertical (12px) y horizontal (10px) */
+    max-width: 290px; /* Ancho perfecto para que quede centrado en el celular */
+    margin: -10px auto 0 auto; /* Centra la grilla en la pantalla */
     padding: 0;
   }
   header nav ul li,
   .nav-principal ul li {
     margin: 0;
-    padding: 0;
     width: 100%;
-    display: flex; /* Mantenemos flex acá adentro para centrar el botón */
+    display: flex;
     justify-content: center;
   }
 }
@@ -256,16 +255,11 @@ ul li:hover {
 @media (max-width: 768px) {
   .botones .botones {
     width: 100%;
-    padding: 6px 2px;
-    font-size: 8px; /* 👈 Letra bien pequeña */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    padding: 8px 12px;
+    font-size: 13px; /* Letra clara y fácil de presionar */
     text-align: center;
-    /* 👇 Estas dos líneas obligan al texto a no desbordar */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    display: block;
+    box-sizing: border-box;
   }
 }
 
