@@ -41,7 +41,6 @@ header nav ul,
     text-align: center;             
     list-style-position: inside;  
     list-style-type: none; 
-    
     display: flex;                  
     flex-direction: row;          
     justify-content: center;        
@@ -74,7 +73,6 @@ header nav ul,
         li {
             margin: 0;     /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */
             padding: 0;
-            flex: 1;       /* 👈 Reparte la pantalla en 4 partes iguales */
             display: flex;
             justify-content: center;
         }

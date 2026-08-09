@@ -116,7 +116,6 @@ header nav ul,
   .nav-principal ul li {
     margin: 0; /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */
     padding: 0;
-    flex: 1; /* 👈 Reparte la pantalla en 4 partes iguales */
     display: flex;
     justify-content: center;
   }
