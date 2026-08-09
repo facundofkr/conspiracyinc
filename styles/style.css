@@ -459,6 +459,8 @@ ul li:hover {
 @media (max-width: 768px) {
   .contacto-container form {
     padding: 5px 5px;
+    font-size: 10px;
+    text-align: center;
   }
 }
 
