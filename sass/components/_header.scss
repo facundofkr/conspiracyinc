@@ -35,7 +35,7 @@
 header nav ul, 
 .nav-principal ul {
     font-family: v.$font-chelsea;   
-    font-size: 40px; 
+    font-size: 35px; 
     font-weight: bold;
     color: v.$color-hueso;
     text-align: center;             
@@ -67,10 +67,10 @@ header nav ul,
         flex-direction: row;     
         flex-wrap: nowrap;       /* Mantiene todo en una línea */
         justify-content: space-evenly; 
-        gap: 2px;                /* Hueco mínimo entre botones */
+        gap: 1px;                /* Hueco mínimo entre botones */
         margin-top: -15px;       
         width: 100%;             /* Asegura que use todo el ancho del celular */
-        padding: 0 5px;          /* Un mini respiro a los costados de la pantalla */
+        padding: 0 1px;          /* Un mini respiro a los costados de la pantalla */
         
         li {
             margin: 0;
