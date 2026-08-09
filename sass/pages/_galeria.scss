@@ -94,15 +94,16 @@ main.container {
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         padding: 20px 10px; 
+        margin-top: 0px;    
+        margin-bottom: 0px; 
+        padding-top: 0px;
+    padding-bottom: 0px;
     }
 }
 
 .nav-principal {
-    
     margin-top: 15px;    
     margin-bottom: 1px; 
-    
-    
     padding-top: 15px;
     padding-bottom: 5px;
 }
