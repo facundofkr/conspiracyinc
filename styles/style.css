@@ -483,6 +483,7 @@ ul li:hover {
   .contacto-container form div input[type=submit] {
     width: 100%;
     max-width: 100px;
+    justify-content: center;
   }
 }
 
