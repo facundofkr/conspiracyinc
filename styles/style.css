@@ -163,7 +163,7 @@ header nav ul li:hover,
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 8px; /* Controla la separación entre botones */
     max-width: 280px; /* Ajusta el ancho total del bloque de botones */
-    margin: -10px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */
+    margin-top: -20px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */
     padding: 0;
   }
   header nav ul li,
@@ -323,6 +323,7 @@ ul li:hover {
     margin: 0 auto 20px auto;
     -o-object-fit: contain;
        object-fit: contain;
+    margin-bottom: 5px;
   }
 }
 
