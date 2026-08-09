@@ -356,7 +356,7 @@ ul li:hover {
   height: 20px;
   cursor: pointer;
   accent-color: #ff4d4d;
-  align-items: left;
+  align-items: center;
 }
 .contacto-container form div .checkbox-container label[for=destroy-humanity] {
   font-size: 16px;
