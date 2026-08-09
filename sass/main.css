@@ -105,7 +105,6 @@ header nav ul li:hover,
     gap: 10px 8px; /* Controla la separación entre botones */
     max-width: 280px; /* Ajusta el ancho total del bloque de botones */
     margin: -10px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */
-    margin-top: -10px auto 0 auto; /* Asegura el centrado horizontal en la pantalla */
     padding: 0;
   }
   header nav ul li,
