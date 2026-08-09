@@ -251,7 +251,7 @@ ul li:hover {
     /* 👇 Acá manejás el tamaño A MANO */
     width: 100%; /* Que ocupe el ancho que le asigne la grilla */
     max-width: 120px; /* 👈 Ajustá este número para hacer el botón más angosto o ancho */
-    padding: 6px 0; /* 👈 Ajustá el primer número para hacerlo más flaquito */
+    padding: 2px 0; /* 👈 Ajustá el primer número para hacerlo más flaquito */
     font-size: 12px; /* 👈 Regulá el tamaño de la letra a tu gusto */
     text-align: center;
     display: block;
