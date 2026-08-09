@@ -168,7 +168,7 @@ header nav ul,
   .nav-principal ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 👈 Obliga a crear 2 columnas iguales */
-    gap: 12px 10px; /* Espacio vertical (12px) y horizontal (10px) */
+    gap: 10px 8px; /* Espacio vertical (12px) y horizontal (10px) */
     max-width: 290px; /* Ancho perfecto para que quede centrado en el celular */
     margin: -10px auto 0 auto; /* Centra la grilla en la pantalla */
     padding: 0;
@@ -254,9 +254,9 @@ ul li:hover {
 }
 @media (max-width: 768px) {
   .botones .botones {
-    width: 100%;
-    padding: 8px 12px;
-    font-size: 13px; /* Letra clara y fácil de presionar */
+    width: 80%;
+    padding: 6px 10px;
+    font-size: 9px; /* Letra clara y fácil de presionar */
     text-align: center;
     display: block;
     box-sizing: border-box;

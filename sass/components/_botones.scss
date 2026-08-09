@@ -28,9 +28,9 @@
     /* 📱 Tamaño ajustado del botón en _botones.scss */
 @media (max-width: 768px) {
     .botones {
-        width: 100%;
-        padding: 8px 12px;
-        font-size: 13px;        /* Letra clara y fácil de presionar */
+        width: 80%;
+        padding: 6px 10px;
+        font-size: 9px;        /* Letra clara y fácil de presionar */
         text-align: center;
         display: block;
         box-sizing: border-box;  

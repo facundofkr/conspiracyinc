@@ -68,7 +68,7 @@ header nav ul,
     @media (max-width: 768px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 👈 Obliga a crear 2 columnas iguales */
-        gap: 12px 10px;                         /* Espacio vertical (12px) y horizontal (10px) */
+        gap: 10px 8px;                         /* Espacio vertical (12px) y horizontal (10px) */
         max-width: 290px;                       /* Ancho perfecto para que quede centrado en el celular */
         margin: -10px auto 0 auto;              /* Centra la grilla en la pantalla */
         padding: 0;
