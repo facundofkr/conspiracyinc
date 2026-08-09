@@ -164,9 +164,9 @@ header nav ul,
   header nav ul,
   .nav-principal ul {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 10px;
+    gap: 4px;
     margin-top: -15px;
   }
   header nav ul li,
@@ -244,9 +244,9 @@ ul li:hover {
   background-color: rgb(1, 68, 21);
 }
 @media (max-width: 768px) {
-  .botones {
-    padding: 6px 14px;
-    font-size: 12px;
+  .botones .botones {
+    padding: 6px 8px; /* Relleno más ajustado */
+    font-size: 11px; /* Letra apenas más chica para que entren las palabras largas */
   }
 }
 
@@ -621,7 +621,7 @@ main ol li .menuseleccion:hover {
   .yo {
     width: 90%;
     height: auto;
-    max-width: 400px;
+    max-width: 300px;
   }
   .yo img {
     height: auto;
