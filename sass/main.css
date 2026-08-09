@@ -97,23 +97,28 @@ header nav ul li:hover,
   filter: drop-shadow(10px 10px 20px rgba(243, 245, 243, 0.658));
   transition: 0.3s ease;
 }
+header nav ul,
+.nav-principal ul {
+  /* 📱 Versión responsiva (Corregida sin anidamiento accidental) */
+}
 @media (max-width: 768px) {
-  header nav ul header nav ul,
-  header nav ul .nav-principal ul,
-  .nav-principal ul header nav ul,
-  .nav-principal ul .nav-principal ul {
-    display: grid;
-    grid-template-columns: max-content max-content;
+  header nav ul,
+  .nav-principal ul {
+    flex-direction: row;
+    flex-wrap: nowrap; /* 👈 Obliga a que los 4 queden en una línea horizontal */
     justify-content: center;
     width: 100%;
-    gap: 12px;
-    padding: 0;
+    gap: 5px; /* 👈 Un hueco muy chiquito entre los botones */
+    padding: 0 5px;
     margin: 0;
   }
   header nav ul li,
   .nav-principal ul li {
-    margin: 0;
+    margin: 0; /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */
     padding: 0;
+    flex: 1; /* 👈 Reparte la pantalla en 4 partes iguales */
+    display: flex;
+    justify-content: center;
   }
 }
 
