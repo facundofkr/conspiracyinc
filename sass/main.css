@@ -579,11 +579,14 @@ main ol li .menuseleccion:hover {
   .yo img {
     height: auto;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .yo img .titulo-principal {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+}
+
+.titulo-principal {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 header nav.nav-nosotros {
