@@ -25,16 +25,25 @@
     }
 
     
-    @media (max-width: 768px) {
+    /* 📱 Tamaño ajustado del botón en _botones.scss */
+@media (max-width: 768px) {
     .botones {
-        width: 100%;             /* Obliga al botón a llenar su contenedor (el li) */
-        padding: 8px 2px;        /* Bajamos el relleno lateral (2px) para que entre el texto */
-        font-size: 11px;         /* Achicamos un poco la letra */
+        width: 100%;             
+        
+        /* 👇 6px arriba/abajo, y CERO a los costados para ganar espacio */
+        padding: 6px 0;          
+        
+        /* 👇 Letra bien chiquita para que palabras largas no rompan el botón */
+        font-size: 9.5px;        
+        
+        /* 👇 Si tenías letter-spacing, lo anulamos acá para que las letras no se separen */
+        letter-spacing: 0;       
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        box-sizing: border-box;  /* Fundamental para que no se desborde */
-        word-break: break-word;  /* Por si la palabra "Contactanos" es muy larga */
+        box-sizing: border-box;  
+        text-align: center;
     }
 }
 }
