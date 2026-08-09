@@ -256,8 +256,8 @@ ul li:hover {
 @media (max-width: 768px) {
   .botones .botones {
     width: 100%;
-    padding: 8px 2px;
-    font-size: 10px; /* 👈 Letra bien pequeña */
+    padding: 6px 2px;
+    font-size: 8px; /* 👈 Letra bien pequeña */
     display: flex;
     justify-content: center;
     align-items: center;
