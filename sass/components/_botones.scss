@@ -25,8 +25,8 @@
     /* 📱 Versión Móvil: Corregida y limpia */
     @media (max-width: 768px) {
         width: 100%;          
-        padding: 6px 2px;  /* 👈 Botón más flaquito para ganar espacio */
-        font-size: 11px;   /* 👈 Letra chica para que entren las palabras largas */
+        padding: 2px 6px;  /* 👈 Botón más flaquito para ganar espacio */
+        font-size: 12px;   /* 👈 Letra chica para que entren las palabras largas */
         letter-spacing: 0; /* 👈 Juntamos las letras para ahorrar espacio */
         text-align: center;
         display: flex;

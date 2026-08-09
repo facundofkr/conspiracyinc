@@ -167,7 +167,7 @@ header nav ul,
     flex-wrap: nowrap; /* 👈 Obliga a que los 4 queden en una línea horizontal */
     justify-content: center;
     width: 100%;
-    gap: 5px; /* 👈 Un hueco muy chiquito entre los botones */
+    gap: 15px; /* 👈 Un hueco muy chiquito entre los botones */
     padding: 0 5px;
     margin: 0;
   }
@@ -253,8 +253,8 @@ ul li:hover {
 @media (max-width: 768px) {
   .botones {
     width: 100%;
-    padding: 6px 2px; /* 👈 Botón más flaquito para ganar espacio */
-    font-size: 11px; /* 👈 Letra chica para que entren las palabras largas */
+    padding: 2px 6px; /* 👈 Botón más flaquito para ganar espacio */
+    font-size: 12px; /* 👈 Letra chica para que entren las palabras largas */
     letter-spacing: 0; /* 👈 Juntamos las letras para ahorrar espacio */
     text-align: center;
     display: flex;
