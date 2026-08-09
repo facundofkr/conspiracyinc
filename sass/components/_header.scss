@@ -69,6 +69,7 @@ header nav ul,
         gap: 15px;          /* 👈 Un hueco muy chiquito entre los botones */
         padding: 0 5px;
         margin: 0; 
+        margin-bottom: -30px;
         
         li {
             margin: 0;     /* 👈 MATA el margen de 20px de la PC para que no haya espacios gigantes */

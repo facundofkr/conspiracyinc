@@ -170,6 +170,7 @@ header nav ul,
     gap: 15px; /* 👈 Un hueco muy chiquito entre los botones */
     padding: 0 5px;
     margin: 0;
+    margin-bottom: -30px;
   }
   header nav ul li,
   .nav-principal ul li {
@@ -437,7 +438,7 @@ ul li:hover {
   text-shadow: 2px 2px 5px black;
   margin: 0;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .contacto-container {
     flex-direction: column;
     align-items: center;
