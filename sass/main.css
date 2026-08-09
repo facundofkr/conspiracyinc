@@ -344,7 +344,11 @@ ul li:hover {
 .contacto-container form div .checkbox-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+  flex-direction: column; /* Pone el checkbox arriba y el botón abajo */
+  align-items: center; /* Los centra horizontalmente */
+  justify-content: center;
+  width: 100%;
 }
 .contacto-container form div .checkbox-container input[type=checkbox] {
   width: 20px;
@@ -368,22 +372,22 @@ ul li:hover {
     gap: 5px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
     margin: 0;
-    /* 👇 AGREGÁ ESTE BLOQUE ADENTRO DEL @MEDIA PARA ACOMODAR EL DIV */
   }
   .contacto-container form div {
     flex-direction: column; /* Pone el checkbox arriba y el botón abajo */
     align-items: center; /* Los centra horizontalmente */
     justify-content: center;
     width: 100%;
-    gap: 15px; /* Espacio entre el checkbox y el botón */
+    gap: 5px; /* Espacio entre el checkbox y el botón */
     /* Asegura que el botón ocupe un buen ancho centrado */
   }
   .contacto-container form div input[type=submit] {
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
   }
 }
-.contacto-container form .modal-container {
+
+.modal-container {
   display: none;
   position: fixed;
   top: 0;
@@ -395,10 +399,10 @@ ul li:hover {
   justify-content: center;
   align-items: center;
 }
-.contacto-container form .modal-container.activo {
+.modal-container.activo {
   display: flex;
 }
-.contacto-container form .modal-container .modal-content {
+.modal-container .modal-content {
   background-color: #2c332c;
   border: 2px solid rgba(1, 170, 29, 0.8);
   border-radius: 15px;
@@ -407,14 +411,14 @@ ul li:hover {
   box-shadow: 0px 0px 30px rgba(1, 170, 29, 0.5);
   animation: aparecer 0.3s ease-out;
 }
-.contacto-container form .modal-container .modal-content p {
+.modal-container .modal-content p {
   font-family: "Orbitron", system-ui;
   color: #ffffff;
   font-size: 20px;
   margin-bottom: 20px;
   text-shadow: 2px 2px 5px black;
 }
-.contacto-container form .modal-container .modal-content button {
+.modal-container .modal-content button {
   background-color: rgb(33, 46, 33);
   color: antiquewhite;
   font-family: "Chelsea Market", system-ui;
@@ -425,12 +429,12 @@ ul li:hover {
   cursor: pointer;
   transition: 0.2s ease;
 }
-.contacto-container form .modal-container .modal-content button:hover {
+.modal-container .modal-content button:hover {
   background-color: rgb(1, 68, 21);
   filter: drop-shadow(0 0 10px rgba(1, 170, 29, 0.8));
 }
 @media (max-width: 768px) {
-  .contacto-container form .modal-container {
+  .modal-container {
     padding: 5px 5px;
   }
 }
