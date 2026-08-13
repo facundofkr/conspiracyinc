@@ -1,27 +1,19 @@
-/* ========================================= */
-/* 1. 🛠️ UTILIDADES                           */
-/* ========================================= */
+
 @use 'utilities/variables';
 @use 'utilities/mixins';
 @use 'utilities/reset';
 @use 'utilities/animations';
 
-/* ========================================= */
-/* 2. 📦 COMPONENTES                         */
-/* ========================================= */
+
 @use 'components/header';
 @use 'components/footer';
 
-/* ========================================= */
-/* 3. 📄 PÁGINAS                             */
-/* ========================================= */
+
 @use 'pages/home';
 @use 'pages/contacto';
 @use 'pages/galeria';
 @use 'pages/menu';
 @use 'pages/nosotros';
 
-/* ========================================= */
-/* 🌐 TIPOGRAFÍAS EXTERNAS                   */
-/* ========================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Orbitron:wght@400..900&display=swap');

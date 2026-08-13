@@ -1,16 +1,16 @@
-/* 1. UTILITIES (Variables, Mixins, Reset, Tipografía) */
+
 @use '../sass/utilities/variables' as v;
 @use '../sass/utilities/mixins' as m;
 @use '../sass/utilities/reset';
 @use '../sass/utilities/typography'; 
 @use '../sass/utilities/animations';
 
-/* 2. COMPONENTS (Bloques reutilizables) */
+
 @use '../sass/components/header';
 @use '../sass/components/footer';
 @use '../sass/components/botones';   
 
-/* 3. PAGES (Estilos específicos de cada vista) */
+
 @use '../sass/pages/home';
 @use '../sass/pages/contacto';
 @use '../sass/pages/galeria';
