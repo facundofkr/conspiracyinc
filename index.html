@@ -18,6 +18,7 @@
     <link rel="icon" href="./assets/logos/logo.png" alt="Logo de Conspiracy Inc." type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body class="home">
@@ -73,6 +74,15 @@
         </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('Service worker registrado con éxito'))
+        .catch(err => console.error('Error al registrar', err));
+    });
+  }
+</script>
     
 </body>
 </html>
